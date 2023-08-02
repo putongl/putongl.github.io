@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title></title>
+    <url>//0.html</url>
+    <content><![CDATA[<h2 id="—"><a href="#—" class="headerlink" title="—-"></a>—-</h2><h2 id="回忆录"><a href="#回忆录" class="headerlink" title="回忆录"></a>回忆录</h2><p>一个真正的IKUN，他会跳舞，比如这样</p>
+<p><img src="C:\Users\liu\Desktop\3bfc6928d18ff1188d5e5a6a69778fa.png" alt="3bfc6928d18ff1188d5e5a6a69778fa"></p>
+<p>他用他优美的舞姿，展现出不一样的风采，一个练习时常两年半的真正的MAN</p>
+<p>著名的麦克阿瑟表示，没想到谷桑成不欺我，他差点又说出那句练习两年半的深田坤桑最爱的话:哎呦，你干嘛！！我上我也行！！大型传奇纪录片:谷门吹牛逼术，持续为您播出！！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>//4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>海贼王</title>
+    <url>//efd2aa73.html</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>2023年8月6日路飞5挡，起飞</p>
+<p>《海贼王》（One Piece）是日本漫画家尾田荣一郎创作的漫画作品，首次连载于1997年7月22日的《周刊少年Jump》杂志上。该作品是一部以海贼为主题的冒险漫画，被誉为现代日本最伟大的漫画之一，也是世界最畅销的漫画作品之一。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Yml文档</title>
+    <url>//8479073d.html</url>
+    <content><![CDATA[<h2 id="yml内容"><a href="#yml内容" class="headerlink" title="yml内容"></a>yml内容</h2><p>乱码：改成utf-8</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Vue笔记</title>
+    <url>//2.html</url>
+    <content><![CDATA[<h1 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h1><p>Vue</p>
+<p>1.Vue 是什么</p>
+<p>概念：Vue 是一个用于 构建用户界面 的 渐进式 框架</p>
+<p>基于数据渲染出用户看到的页面</p>
+<p>Vue 的两种使用方式：</p>
+<p>① Vue 核心包开发</p>
+<p>场景：局部 模块改造</p>
+<p>② Vue 核心包 &amp; Vue 插件 工程化开发</p>
+<p>场景：整站 开发</p>
+<p>2.创建 Vue 实例，初始化渲染的核心步骤：</p>
+<p>\1. 准备容器</p>
+<p>\2. 引包 (官网) - 开发版本 / 生产版本</p>
+<p>\3. 创建 Vue 实例 new Vue()</p>
+<p>\4. 指定配置项 el data =&gt; 渲染数据</p>
+<p>① el 指定挂载点，选择器指定控制的是哪个盒子</p>
+<p>② data 提供数</p>
+<p>3.插值表达式 </p>
+<p>插值表达式是一种 Vue 的模板语法</p>
+<p>\1. 作用: 利用表达式进行插值，渲染到页面中</p>
+<p>表达式：是可以被求值的代码，JS引擎会将其计算出一个结果</p>
+<p>\2. 语法：</p>
+<p>\3. 注意点：</p>
+<p>（1）使用的数据必须存在 （data） </p>
+<p>（2）支持的是表达式，而非语句，比如：if for ..</p>
+<p>（3）不能在标签属性中使用"{{}}"插值</p>
+<p>4.Vue 核心特性：响应</p>
+<p>数据的响应式处理 → 响应式：数据变化，视图自动更新</p>
+<p>使用 Vue 开发，关注业务的核心逻辑，根据业务修改数据即可</p>
+<p>如何访问或修改数据呢？</p>
+<p>data中的数据, 最终会被添加到实例上</p>
+<p>① 访问数据： “实例.属性名”</p>
+<p>② 修改数据： “实例.属性名” = “值”</p>
+<p>5.Vue 指令</p>
+<p>Vue 会根据不同的【指令】，针对标签实现不同的【功能】</p>
+<p>指令：带有 v- 前缀 的 特殊 标签属性，不同属性 对应 不同的功能</p>
+<p>v-html:作用：设置元素的 innerHTML语法：v-html = “表达式”</p>
+<p>动态解析标签</p>
+<p>​    msg: <code>&lt;a href=&quot;http://douyin.com&quot;&gt;            抖音             &lt;/a&gt;</code></p>
+<p>msg里面不是引号，是Tab上面的 `号</p>
+<p>v-show vs v-if</p>
+<p>v-show</p>
+<p>\1. 作用： 控制元素显示隐藏</p>
+<p>\2. 语法： v-show = “表达式” 表达式值 true 显示， false 隐藏</p>
+<p>\3. 原理： 切换 display:none 控制显示隐藏</p>
+<p>\4. 场景： 频繁切换显示隐藏的场景</p>
+<p>v-if</p>
+<p>\1. 作用： 控制元素显示隐藏（条件渲染）</p>
+<p>\2. 语法： v-if = “表达式” 表达式值 true 显示， false 隐藏</p>
+<p>\3. 原理： 基于条件判断，是否 创建 或 移除 元素节点</p>
+<p>\4. 场景： 要么显示，要么隐藏，不频繁切换的场景</p>
+<p>v-else v-else-if</p>
+<p>\1. 作用： 辅助 v-if 进行判断渲染</p>
+<p>\2. 语法： v-else v-else-if = “表达式”</p>
+<p>\3. 注意： 需要紧挨着 v-if 一起使用</p>
+<p>v-on</p>
+<p>\1. 作用： 注册事件 = 添加监听 + 提供处理逻辑</p>
+<p>\2. 语法：</p>
+<p>① v-on:事件名 = “内联语句”        @click=”count++”</p>
+<p>② v-on:事件名 = “methods中的函数名”</p>
+<p>\3. 简写：@事件名        v-on:替换成@</p>
+]]></content>
+  </entry>
+</search>
