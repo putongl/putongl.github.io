@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2.html</loc>
+    <loc>http://putongl.github.io/2.html</loc>
     
     <lastmod>2023-08-02</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/0.html</loc>
+    <loc>http://putongl.github.io/0.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://putongl.github.io/about/index.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>http://putongl.github.io/categories/index.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/link/index.html</loc>
+    <loc>http://putongl.github.io/link/index.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>http://putongl.github.io/tags/index.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/efd2aa73.html</loc>
+    <loc>http://putongl.github.io/efd2aa73.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/8479073d.html</loc>
+    <loc>http://putongl.github.io/8479073d.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/4a17b156.html</loc>
+    <loc>http://putongl.github.io/4a17b156.html</loc>
     
     <lastmod>2023-08-01</lastmod>
     
@@ -84,7 +84,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://putongl.github.io/</loc>
     <lastmod>2023-08-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
