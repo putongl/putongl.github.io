@@ -10,14 +10,110 @@
 ]]></content>
   </entry>
   <entry>
+    <title>JS</title>
+    <url>//2.html</url>
+    <content><![CDATA[<h1 id="JS判断相等或者不等于（-、-、-、-）运算符"><a href="#JS判断相等或者不等于（-、-、-、-）运算符" class="headerlink" title="JS判断相等或者不等于（==、===、!=、!==）运算符"></a>JS判断相等或者不等于（==、===、!=、!==）运算符</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>等值检测运算符</th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==（相等）</td>
+<td>比较两个操作数的值是否相等</td>
+</tr>
+<tr>
+<td>!=（不想等）</td>
+<td>比较两个操作数的值是否不相等</td>
+</tr>
+<tr>
+<td>===（全等）</td>
+<td>比较两个操作数的值是否相等，同时检测它们的类型是否相同</td>
+</tr>
+<tr>
+<td>!==（不全等）</td>
+<td>比较两个操作数的值是否不相等，同时检测它们的类型是否不相同</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>在相等运算中，应注意以下几个问题：</p>
+<ul>
+<li>如果操作数是布尔值，则先转换为数值，其中 false 转为 0，true 转换为 1。</li>
+<li>如果一个操作数是字符串，另一个操作数是数字，则先尝试把字符串转换为数字。</li>
+<li>如果一个操作数是字符串，另一个操作数是对象，则先尝试把对象转换为字符串。</li>
+<li>如果一个操作数是数字，另一个操作数是对象，则先尝试把对象转换为数字。</li>
+<li>如果两个操作数都是对象，则比较引用地址。如果引用地址相同，则相等；否则不等。</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>VSCode</title>
+    <url>//4.html</url>
+    <content><![CDATA[<h2 id="Visual-Studio-Code代码想要同时编辑多处，该怎么实现呢？"><a href="#Visual-Studio-Code代码想要同时编辑多处，该怎么实现呢？" class="headerlink" title="Visual Studio Code代码想要同时编辑多处，该怎么实现呢？"></a>Visual Studio Code代码想要同时编辑多处，该怎么实现呢？</h2><h3 id="1-重命名变量"><a href="#1-重命名变量" class="headerlink" title="1. 重命名变量"></a>1. 重命名变量</h3><p>首先看看自己需要同时修改多处的代码是不是要重命名一个变量，如果是的话，有现成的快捷键<code>f2</code></p>
+<p>使用方法：</p>
+<ul>
+<li>选中一个变量，按<code>f2</code> 或者 按 <code>Fn + f2</code>，具体依据电脑品牌而定！</li>
+<li>弹出一个小窗口，在里面输入内容后按回车，所有该变量都会被重命名。</li>
+</ul>
+<p>注意:在<code>js文件</code>中，如果这个变量没有用<code>var或者const或者let</code>声明，会无法重命名</p>
+<h3 id="2-多光标"><a href="#2-多光标" class="headerlink" title="2. 多光标"></a>2. 多光标</h3><blockquote>
+<ol>
+<li>按住<code>alt</code>，用鼠标<code>左键点击</code>，可以出现多个光标，输入的代码可以在光标处同时增加</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200422083554386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li>按住<code>Ctrl + Alt</code>，再按键盘上向上或者向下的键，可以使一列上出现多个光标。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200422083616427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li>选中一段文字，按<code>shift+alt+i</code>，可以在每行末尾出现光标</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200422083701920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200422083732228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li>光标放在一个地方，按<code>ctrl+shift+L</code>或者<code>ctrl+f2</code>，可以在页面中出现这个词的不同地方都出现光标。<code>有时候这个快捷键的作用和f2重命名变量类似</code>，但是它更加广泛，因为还可以对比如字符串相同的非同一变量或函数类的东西修改。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200422083800550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200422083823986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li>按<code>shift+alt</code>，再使用鼠标拖动，也可以出现竖直的列光标，同时可以选中多列。</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200422083850569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li>任何光标操作，可以按<code>Ctrl + U</code>取消</li>
+</ol>
+</blockquote>
+<h3 id="3-替换字符串"><a href="#3-替换字符串" class="headerlink" title="3. 替换字符串"></a>3. 替换字符串</h3><blockquote>
+<ol>
+<li><p>按<code>ctrl+f</code>，可以搜索当前页面，然后按搜索框左边的小三角符号，<code>可以切换成替换模式</code>。</p>
+<p>有时候使用字符串替换，比多光标方便，但是注意别不小心替换掉不想替换的内容。</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20200422083915366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/2020042208393542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>以上就是<code>vscode</code>同时编辑多处的三种方法，希望大家喜欢，谢谢！</p>
+</blockquote>
+<h3 id="4-全局替换某些单词"><a href="#4-全局替换某些单词" class="headerlink" title="4.全局替换某些单词"></a>4.全局替换某些单词</h3><ul>
+<li>​        快捷键：ctrl + h </li>
+</ul>
+<h5 id="5-快速定位到某一行"><a href="#5-快速定位到某一行" class="headerlink" title="5.快速定位到某一行"></a>5.快速定位到某一行</h5><ul>
+<li>​        快捷键：ctrl + g</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>Yml文档</title>
-    <url>//8479073d.html</url>
+    <url>//5.html</url>
     <content><![CDATA[<h2 id="yml内容"><a href="#yml内容" class="headerlink" title="yml内容"></a>yml内容</h2><p>乱码：改成utf-8</p>
 ]]></content>
   </entry>
   <entry>
     <title>Vue笔记</title>
-    <url>//2.html</url>
+    <url>//3.html</url>
     <content><![CDATA[<h1 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h1><h2 id="1-Vue-是什么"><a href="#1-Vue-是什么" class="headerlink" title="1.Vue 是什么"></a>1.Vue 是什么</h2><h3 id="1-1-概念：Vue-是一个用于-构建用户界面-的-渐进式-框架"><a href="#1-1-概念：Vue-是一个用于-构建用户界面-的-渐进式-框架" class="headerlink" title="1.1.概念：Vue 是一个用于 构建用户界面 的 渐进式 框架"></a>1.1.概念：Vue 是一个用于 构建用户界面 的 渐进式 框架</h3><p>基于数据渲染出用户看到的页面</p>
 <ul>
 <li>Vue 的两种使用方式：</li>
@@ -237,24 +333,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>//4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>海贼王</title>
-    <url>//efd2aa73.html</url>
-    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>2023年8月6日路飞5挡，起飞</p>
-<p>《海贼王》（One Piece）是日本漫画家尾田荣一郎创作的漫画作品，首次连载于1997年7月22日的《周刊少年Jump》杂志上。该作品是一部以海贼为主题的冒险漫画，被誉为现代日本最伟大的漫画之一，也是世界最畅销的漫画作品之一。</p>
+    <url>//1.html</url>
+    <content><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>2023年8月6日路飞5档，起飞</p>
 ]]></content>
   </entry>
 </search>

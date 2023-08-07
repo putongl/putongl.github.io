@@ -6,7 +6,7 @@
   <link href="http://putongl.github.io/atom.xml" rel="self"/>
   
   <link href="http://putongl.github.io/"/>
-  <updated>2023-08-04T13:25:34.395Z</updated>
+  <updated>2023-08-07T07:14:00.769Z</updated>
   <id>http://putongl.github.io/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vue笔记</title>
+    <title>JS</title>
     <link href="http://putongl.github.io/2.html"/>
     <id>http://putongl.github.io/2.html</id>
+    <published>2023-08-07T07:08:52.335Z</published>
+    <updated>2023-08-07T07:14:00.769Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JS判断相等或者不等于（-、-、-、-）运算符"><a href="#JS判断相等或者不等于（-、-、-、-）运算符" class="headerlink" title="JS判断相等或者不等于（==、===、!=、!==）运算符"></a>JS判断相等或者不等于（==、===、!=、!==）运算符</h1><div class="table-container"><table><thead><tr><th>等值检测运算符</th><th><strong>说明</strong></th></tr></thead><tbody><tr><td>==（相等）</td><td>比较两个操作数的值是否相等</td></tr><tr><td>!=（不想等）</td><td>比较两个操作数的值是否不相等</td></tr><tr><td>===（全等）</td><td>比较两个操作数的值是否相等，同时检测它们的类型是否相同</td></tr><tr><td>!==（不全等）</td><td>比较两个操作数的值是否不相等，同时检测它们的类型是否不相同</td></tr></tbody></table></div><p>在相等运算中，应注意以下几个问题：</p><ul><li>如果操作数是布尔值，则先转换为数值，其中 false 转为 0，true 转换为 1。</li><li>如果一个操作数是字符串，另一个操作数是数字，则先尝试把字符串转换为数字。</li><li>如果一个操作数是字符串，另一个操作数是对象，则先尝试把对象转换为字符串。</li><li>如果一个操作数是数字，另一个操作数是对象，则先尝试把对象转换为数字。</li><li>如果两个操作数都是对象，则比较引用地址。如果引用地址相同，则相等；否则不等。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;JS判断相等或者不等于（-、-、-、-）运算符&quot;&gt;&lt;a href=&quot;#JS判断相等或者不等于（-、-、-、-）运算符&quot; class=&quot;headerlink&quot; title=&quot;JS判断相等或者不等于（==、===、!=、!==）运算符&quot;&gt;&lt;/a&gt;JS判断相等或者不等于</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode</title>
+    <link href="http://putongl.github.io/4.html"/>
+    <id>http://putongl.github.io/4.html</id>
+    <published>2023-08-07T07:08:50.520Z</published>
+    <updated>2023-08-07T07:14:16.096Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Visual-Studio-Code代码想要同时编辑多处，该怎么实现呢？"><a href="#Visual-Studio-Code代码想要同时编辑多处，该怎么实现呢？" class="headerlink" title="Visual Studio Code代码想要同时编辑多处，该怎么实现呢？"></a>Visual Studio Code代码想要同时编辑多处，该怎么实现呢？</h2><h3 id="1-重命名变量"><a href="#1-重命名变量" class="headerlink" title="1. 重命名变量"></a>1. 重命名变量</h3><p>首先看看自己需要同时修改多处的代码是不是要重命名一个变量，如果是的话，有现成的快捷键<code>f2</code></p><p>使用方法：</p><ul><li>选中一个变量，按<code>f2</code> 或者 按 <code>Fn + f2</code>，具体依据电脑品牌而定！</li><li>弹出一个小窗口，在里面输入内容后按回车，所有该变量都会被重命名。</li></ul><p>注意:在<code>js文件</code>中，如果这个变量没有用<code>var或者const或者let</code>声明，会无法重命名</p><h3 id="2-多光标"><a href="#2-多光标" class="headerlink" title="2. 多光标"></a>2. 多光标</h3><blockquote><ol><li>按住<code>alt</code>，用鼠标<code>左键点击</code>，可以出现多个光标，输入的代码可以在光标处同时增加</li></ol><p><img src="https://img-blog.csdnimg.cn/20200422083554386.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol><li>按住<code>Ctrl + Alt</code>，再按键盘上向上或者向下的键，可以使一列上出现多个光标。</li></ol><p><img src="https://img-blog.csdnimg.cn/20200422083616427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol><li>选中一段文字，按<code>shift+alt+i</code>，可以在每行末尾出现光标</li></ol><p><img src="https://img-blog.csdnimg.cn/20200422083701920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200422083732228.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol><li>光标放在一个地方，按<code>ctrl+shift+L</code>或者<code>ctrl+f2</code>，可以在页面中出现这个词的不同地方都出现光标。<code>有时候这个快捷键的作用和f2重命名变量类似</code>，但是它更加广泛，因为还可以对比如字符串相同的非同一变量或函数类的东西修改。</li></ol><p><img src="https://img-blog.csdnimg.cn/20200422083800550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/20200422083823986.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol><li>按<code>shift+alt</code>，再使用鼠标拖动，也可以出现竖直的列光标，同时可以选中多列。</li></ol><p><img src="https://img-blog.csdnimg.cn/20200422083850569.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><ol><li>任何光标操作，可以按<code>Ctrl + U</code>取消</li></ol></blockquote><h3 id="3-替换字符串"><a href="#3-替换字符串" class="headerlink" title="3. 替换字符串"></a>3. 替换字符串</h3><blockquote><ol><li><p>按<code>ctrl+f</code>，可以搜索当前页面，然后按搜索框左边的小三角符号，<code>可以切换成替换模式</code>。</p><p>有时候使用字符串替换，比多光标方便，但是注意别不小心替换掉不想替换的内容。</p></li></ol><p><img src="https://img-blog.csdnimg.cn/20200422083915366.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p><img src="https://img-blog.csdnimg.cn/2020042208393542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDY2NjY0NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>以上就是<code>vscode</code>同时编辑多处的三种方法，希望大家喜欢，谢谢！</p></blockquote><h3 id="4-全局替换某些单词"><a href="#4-全局替换某些单词" class="headerlink" title="4.全局替换某些单词"></a>4.全局替换某些单词</h3><ul><li>​        快捷键：ctrl + h </li></ul><h5 id="5-快速定位到某一行"><a href="#5-快速定位到某一行" class="headerlink" title="5.快速定位到某一行"></a>5.快速定位到某一行</h5><ul><li>​        快捷键：ctrl + g</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Visual-Studio-Code代码想要同时编辑多处，该怎么实现呢？&quot;&gt;&lt;a href=&quot;#Visual-Studio-Code代码想要同时编辑多处，该怎么实现呢？&quot; class=&quot;headerlink&quot; title=&quot;Visual Studio Code代码</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue笔记</title>
+    <link href="http://putongl.github.io/3.html"/>
+    <id>http://putongl.github.io/3.html</id>
     <published>2023-08-02T07:15:31.884Z</published>
-    <updated>2023-08-04T13:25:34.395Z</updated>
+    <updated>2023-08-07T07:14:11.965Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h1><h2 id="1-Vue-是什么"><a href="#1-Vue-是什么" class="headerlink" title="1.Vue 是什么"></a>1.Vue 是什么</h2><h3 id="1-1-概念：Vue-是一个用于-构建用户界面-的-渐进式-框架"><a href="#1-1-概念：Vue-是一个用于-构建用户界面-的-渐进式-框架" class="headerlink" title="1.1.概念：Vue 是一个用于 构建用户界面 的 渐进式 框架"></a>1.1.概念：Vue 是一个用于 构建用户界面 的 渐进式 框架</h3><p>基于数据渲染出用户看到的页面</p><ul><li>Vue 的两种使用方式：</li></ul><p>​        ① Vue 核心包开发</p><p>​                场景：局部 模块改造</p><p>​        ② Vue 核心包 &amp; Vue 插件 工程化开发</p><p>​                场景：整站 开发</p><h3 id="1-2-创建-Vue-实例，初始化渲染的核心步骤："><a href="#1-2-创建-Vue-实例，初始化渲染的核心步骤：" class="headerlink" title="1.2.创建 Vue 实例，初始化渲染的核心步骤："></a>1.2.创建 Vue 实例，初始化渲染的核心步骤：</h3><ol><li><p>准备容器</p></li><li><p>引包 (官网) - 开发版本 / 生产版本</p></li><li><p>创建 Vue 实例 new Vue()</p></li><li><p>指定配置项 el data =&gt; 渲染数据</p></li></ol><ul><li><p>① el 指定挂载点，选择器指定控制的是哪个盒子</p></li><li><p>② data 提供数</p></li></ul><h3 id="1-3-插值表达式"><a href="#1-3-插值表达式" class="headerlink" title="1.3.插值表达式"></a>1.3.插值表达式</h3><p>插值表达式是一种 Vue 的模板语法</p><ol><li><p>作用: 利用表达式进行插值，渲染到页面中</p><p>​    表达式：是可以被求值的代码，JS引擎会将其计算出一个结果</p></li><li><p>语法：</p></li><li><p>注意点：</p><p>（1）使用的数据必须存在 （data） </p><p>（2）支持的是表达式，而非语句，比如：if for ..</p><p>（3）不能在标签属性中使用"{{}}"插值</p></li></ol><h3 id="1-4-Vue-核心特性：响应"><a href="#1-4-Vue-核心特性：响应" class="headerlink" title="1.4.Vue 核心特性：响应"></a>1.4.Vue 核心特性：响应</h3><ul><li><p>​    数据的响应式处理 → 响应式：数据变化，视图自动更新</p><p>​        使用 Vue 开发，关注业务的核心逻辑，根据业务修改数据即可</p></li><li><p>​    如何访问或修改数据呢？</p><p>​        data中的数据, 最终会被添加到实例上</p><p>​            ① 访问数据： “实例.属性名”</p><p>​            ② 修改数据： “实例.属性名” = “值”</p></li></ul><h3 id="1-5-Vue-指令"><a href="#1-5-Vue-指令" class="headerlink" title="1.5.Vue 指令"></a>1.5.Vue 指令</h3><p>Vue 会根据不同的【指令】，针对标签实现不同的【功能】</p><p>​    指令：带有 v- 前缀 的 特殊 标签属性，不同属性 对应 不同的功能</p><p>v-html:作用：设置元素的 innerHTML语法：v-html = “表达式”</p><ul><li>​    动态解析标签</li></ul><pre><code>  msg: `    &lt;a href=&quot;http://douyin.com&quot;&gt;        抖音         &lt;/a&gt;   ` </code></pre><p>​    msg里面不是引号，是Tab上面的 `号</p><p>v-show and v-if</p><p>v-show</p><ol><li><p>作用： 控制元素显示隐藏</p></li><li><p>语法： v-show = “表达式” 表达式值 true 显示， false 隐藏</p></li><li><p>原理： 切换 display:none 控制显示隐藏</p></li><li><p>场景： 频繁切换显示隐藏的场景</p></li></ol><p>v-if</p><ol><li><p>作用： 控制元素显示隐藏（条件渲染）</p></li><li><p>语法： v-if = “表达式” 表达式值 true 显示， false 隐藏</p></li><li><p>原理： 基于条件判断，是否 创建 或 移除 元素节点</p></li><li><p>场景： 要么显示，要么隐藏，不频繁切换的场景</p></li></ol><p>v-else v-else-if</p><ol><li><p>作用： 辅助 v-if 进行判断渲染</p></li><li><p>语法： v-else v-else-if = “表达式”</p></li><li><p>注意： 需要紧挨着 v-if 一起使用</p></li></ol><p>v-on</p><ul><li><p>作用： 注册事件 = 添加监听 + 提供处理逻辑</p></li><li><p>语法：① v-on:事件名 = “内联语句”        @click=”count++”</p><p> ​           ② v-on:事件名 = “methods中的函数名”</p></li><li><p>简写：@事件名        v-on:click替换成@click</p></li><li>注意：methods函数内的 this 指向 Vue 实例 </li></ul><p>v-bind</p><ol><li><p>作用： 动态的设置html的标签属性 → src url title ..</p></li><li><p>语法： v-bind:属性名=”表达式”</p></li><li><p>注意： 简写形式  :属性名=”表达式”</p><p>v-for</p></li><li><p>作用： 基于数据循环， 多次渲染整个元素</p></li><li><p>遍历数组语法：</p><ul><li>v-for = “(item, index) in 数组”</li><li>item 数组中的每一项数据， index 下标</li><li>也可以省略 index: v-for = “item in 数组“</li></ul></li><li>v-for 中的 key<ul><li>语法： :key属性 = “唯一标识”</li><li>作用：给列表项添加的唯一标识。便于Vue进行列表项的正确排序复用。</li><li>key 的值必须具有 唯一性</li><li>推荐使用 id 作为 key（唯一），不推荐使用 index 作为 key（会变化，不对应）</li></ul></li><li>v-for 的默认行为会尝试 原地修改元素 （就地复用）</li></ol><p>v-model</p><ol><li><p>作用: 给 表单元素 使用, 双向数据绑定 → 可以快速 获取 或 设置 表单元素内容 </p><p>① 数据变化 → 视图自动更新 </p><p>② 视图变化 → 数据自动更新 </p></li><li><p>语法: v-model = ‘变量’</p></li></ol><p><strong><code>trim()</code></strong> 方法从字符串的两端清除空格，返回一个新的字符串，而不修改原始字符串。此上下文中的空格是指所有的空白字符（空格、tab、不换行空格等）以及所有行终止符字符（如 LF、CR 等）。</p><h3 id="1-6-指令修饰符"><a href="#1-6-指令修饰符" class="headerlink" title="1.6.指令修饰符"></a>1.6.指令修饰符</h3><ul><li>通过 “.” 指明一些指令 后缀，不同 后缀 封装了不同的处理操作 → 简化代码</li><li>① 按键修饰符<ul><li>@keyup.enter → 键盘回车监听</li></ul></li><li>② v-model修饰符<ul><li>v-model.trim → 去除首尾空格</li><li>v-model.number → 转数字</li></ul></li><li>③ 事件修饰符<ul><li>@事件名.stop → 阻止冒泡</li><li>@事件名.prevent → 阻止默认行为</li></ul></li></ul><h3 id="1-7-v-bind-对于样式控制的增强"><a href="#1-7-v-bind-对于样式控制的增强" class="headerlink" title="1.7.v-bind 对于样式控制的增强"></a>1.7.v-bind 对于样式控制的增强</h3><ul><li>为了方便开发者进行样式控制， Vue 扩展了 v-bind 的语法，可以针对 class 类名 和 style 行内样式 进行控制 。</li></ul><ol><li><p>操作class</p><ul><li><p>语法 :class = “对象/数组” </p><p>① 对象 → 键就是类名，值是布尔值。如果值为 true，有这个类，否则没有这个类</p></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;box&quot; :class=&quot;&#123; 类名1: 布尔值, 类名2: 布尔值 &#125;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>​        适用场景：一个类名，来回切换</p><p>​            ② 数组 → 数组中所有的类，都会添加到盒子上，本质就是一个 class 列表 v-bind 对于样式控制的增强 - 操作class</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;box&quot; :class=&quot;[ 类名1, 类名2, 类名3 ]&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>​        适用场景：批量添加或删除类</p></li><li><p>操作style</p><ul><li>语法 :style = “样式对象”</li></ul></li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;box&quot; :style=&quot;&#123; CSS属性名1: CSS属性值, CSS属性名2: CSS属性值 &#125;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>​        适用场景：某个具体属性的动态设置</p><h3 id="1-8-v-model-应用于其他表单元素"><a href="#1-8-v-model-应用于其他表单元素" class="headerlink" title="1.8.v-model 应用于其他表单元素"></a>1.8.v-model 应用于其他表单元素</h3><ul><li>​    常见的表单元素都可以用 v-model 绑定关联 → 快速 获取 或 设置 表单元素的值</li><li>​        v-model 应用于其他表单元素</li><li>​    它会根据 控件类型 自动选取 正确的方法 来更新元素</li></ul><h3 id="1-9-计算属性"><a href="#1-9-计算属性" class="headerlink" title="1.9.计算属性"></a>1.9.计算属性</h3><ul><li>概念：基于现有的数据，计算出来的新属性。 依赖的数据变化，自动重新计算。</li><li>语法：</li><li>① 声明在 computed 配置项中，一个计算属性对应一个函数</li><li>② 使用起来和普通属性一样使用 </li><li>计算属性 → 可以将一段 求值的代码 进行封装</li></ul><h3 id="1-10-computed-计算属性-vs-methods-方法"><a href="#1-10-computed-计算属性-vs-methods-方法" class="headerlink" title="1.10. computed 计算属性 vs methods 方法"></a>1.10. computed 计算属性 vs methods 方法</h3><ul><li>computed 计算属性：<ul><li>作用：封装了一段对于数据的处理，求得一个结果。</li><li>语法：<ul><li>① 写在方法的配置项中</li><li>② 作为属性，直接使用 → this.计算属性 </li></ul></li><li>缓存特性（提升性能）：<ul><li>计算属性会对计算出来的结果缓存，再次使用直接读取缓存，依赖项变化了，会自动重新计算 → 并再次缓存</li></ul></li></ul></li><li>methods 方法：<ul><li>作用：给实例提供一个方法，调用以处理业务逻辑。</li><li>语法：<ul><li>① 写在方法的配置项中</li><li>② 作为方法，需要调用 → this方法 /( ) </li></ul></li></ul></li></ul>]]></content>
     
@@ -59,10 +99,10 @@
   
   <entry>
     <title>Yml文档</title>
-    <link href="http://putongl.github.io/8479073d.html"/>
-    <id>http://putongl.github.io/8479073d.html</id>
+    <link href="http://putongl.github.io/5.html"/>
+    <id>http://putongl.github.io/5.html</id>
     <published>2023-07-31T07:53:33.760Z</published>
-    <updated>2023-08-01T06:59:55.136Z</updated>
+    <updated>2023-08-07T07:13:50.475Z</updated>
     
     <content type="html"><![CDATA[<h2 id="yml内容"><a href="#yml内容" class="headerlink" title="yml内容"></a>yml内容</h2><p>乱码：改成utf-8</p>]]></content>
     
@@ -80,38 +120,18 @@
   
   <entry>
     <title>海贼王</title>
-    <link href="http://putongl.github.io/efd2aa73.html"/>
-    <id>http://putongl.github.io/efd2aa73.html</id>
+    <link href="http://putongl.github.io/1.html"/>
+    <id>http://putongl.github.io/1.html</id>
     <published>2023-07-29T09:18:40.507Z</published>
-    <updated>2023-08-01T09:26:29.942Z</updated>
+    <updated>2023-08-07T07:14:05.252Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>2023年8月6日路飞5挡，起飞</p><p>《海贼王》（One Piece）是日本漫画家尾田荣一郎创作的漫画作品，首次连载于1997年7月22日的《周刊少年Jump》杂志上。该作品是一部以海贼为主题的冒险漫画，被誉为现代日本最伟大的漫画之一，也是世界最畅销的漫画作品之一。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;2023年8月6日路飞5挡，起飞&lt;/p&gt;
-&lt;p&gt;《海贼王》（One Piece）是日本漫画家尾田荣一郎创作的漫画作品，首次连载于1997年7</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://putongl.github.io/4a17b156.html"/>
-    <id>http://putongl.github.io/4a17b156.html</id>
-    <published>2023-07-29T08:53:12.760Z</published>
-    <updated>2023-08-01T06:59:55.134Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>2023年8月6日路飞5档，起飞</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;2023年8月6日路飞5档，起飞&lt;/p&gt;
+</summary>
       
     
     
