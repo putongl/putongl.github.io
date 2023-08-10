@@ -1,7 +1,7 @@
-http://putongl.github.io/4.html
-http://putongl.github.io/3.html
-http://putongl.github.io/1.html
 http://putongl.github.io/2.html
+http://putongl.github.io/3.html
+http://putongl.github.io/4.html
+http://putongl.github.io/1.html
 http://putongl.github.io/5.html
 http://putongl.github.io/888.html
 http://putongl.github.io/about/index.html
@@ -9,4 +9,6 @@ http://putongl.github.io/categories/index.html
 http://putongl.github.io/link/index.html
 http://putongl.github.io/tags/index.html
 http://putongl.github.io/
+http://putongl.github.io/tags/Vue/
+http://putongl.github.io/tags/js/
 http://putongl.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
