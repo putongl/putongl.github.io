@@ -128,6 +128,22 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
 <li>第三个参数为true，则为捕获阶段</li>
 <li>省略不写，或为false，为冒泡阶段</li>
 </ul>
+<h2 id="6-事件循环"><a href="#6-事件循环" class="headerlink" title="6.事件循环"></a>6.事件循环</h2><ul>
+<li>定义:执行代码和收集异步任务的模型，在调用栈空闲，反复调用任务队列里回调函数的执行机制，就叫事件循环</li>
+</ul>
+<p>执行过程</p>
+<p>1.执行同步代码，遇到异步代码交给宿主浏览器环境</p>
+<p>2.执行异步有了结果后，把回调函数放入任务队列排队</p>
+<p>3.当调用栈空闲后，反复调用任务队列里的回调函数</p>
+<p><img src="https://s2.loli.net/2023/08/27/qLNrMJUvgkXTQom.png" alt="image-20230827115025297"></p>
+<h2 id="7-宏任务和微任务"><a href="#7-宏任务和微任务" class="headerlink" title="7.宏任务和微任务"></a>7.宏任务和微任务</h2><ul>
+<li>1．什么是宏任务?</li>
+<li>浏览器执行的异步代码</li>
+<li>例如:JS执行脚本事件，setTimeout/setlnterval,AJAX请求完成事件，用户交互事件等</li>
+<li>2．什么是微任务?</li>
+<li>JS引擎执行的异步代码</li>
+<li>例如:Promise对象.then()的回调</li>
+</ul>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -141,7 +157,7 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
   </entry>
   <entry>
     <title>Vue笔记</title>
-    <url>//3.html</url>
+    <url>//vue.html</url>
     <content><![CDATA[<h1 id="Vue笔记"><a href="#Vue笔记" class="headerlink" title="Vue笔记"></a>Vue笔记</h1><h2 id="1-Vue-是什么"><a href="#1-Vue-是什么" class="headerlink" title="1.Vue 是什么"></a>1.Vue 是什么</h2><h3 id="1-1-概念：Vue-是一个用于-构建用户界面-的-渐进式-框架"><a href="#1-1-概念：Vue-是一个用于-构建用户界面-的-渐进式-框架" class="headerlink" title="1.1.概念：Vue 是一个用于 构建用户界面 的 渐进式 框架"></a>1.1.概念：Vue 是一个用于 构建用户界面 的 渐进式 框架</h3><p>基于数据渲染出用户看到的页面</p>
 <ul>
 <li>Vue 的两种使用方式：</li>
@@ -161,10 +177,9 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
 </li>
 </ol>
 <ul>
-<li><p>① el 指定挂载点，选择器指定控制的是哪个盒子</p>
-</li>
-<li><p>② data 提供数</p>
-</li>
+<li>① 通过el配置选择器 ，指定vue管理的是哪个盒子，作用跟vue脚手架中的main.js中的</li>
+<li>$mount()作用一致</li>
+<li>② data 提供数</li>
 </ul>
 <h3 id="1-3-插值表达式"><a href="#1-3-插值表达式" class="headerlink" title="1.3.插值表达式"></a>1.3.插值表达式</h3><p>插值表达式是一种 Vue 的模板语法</p>
 <ol>
@@ -176,7 +191,7 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
 <li><p>注意点：</p>
 <p>（1）使用的数据必须存在 （data） </p>
 <p>（2）支持的是表达式，而非语句，比如：if for ..</p>
-<p>（3）不能在标签属性中使用"{{}}"插值</p>
+<p>（3）不能在标签属性中使用插值表达式</p>
 </li>
 </ol>
 <h3 id="1-4-Vue-核心特性：响应"><a href="#1-4-Vue-核心特性：响应" class="headerlink" title="1.4.Vue 核心特性：响应"></a>1.4.Vue 核心特性：响应</h3><ul>
@@ -280,7 +295,9 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
 <li><p>语法: v-model = ‘变量’</p>
 </li>
 </ol>
-<p><strong><code>trim()</code></strong> 方法从字符串的两端清除空格，返回一个新的字符串，而不修改原始字符串。此上下文中的空格是指所有的空白字符（空格、tab、不换行空格等）以及所有行终止符字符（如 LF、CR 等）。</p>
+<p><strong><code>v-model.trim()</code></strong> 方法从字符串的两端清除空格，返回一个新的字符串，而不修改原始字符串。此上下文中的空格是指所有的空白字符（空格、tab、不换行空格等）以及所有行终止符字符（如 LF、CR 等）。</p>
+<p><strong><code>v-model.number()</code></strong> 方法可以将输入的数据转换为Number类型，否则虽然你输入的是数字.但它的类型其实是String</p>
+<p><strong><code>v-model.lazy()</code></strong>方法失去焦点更新，并不是实时改变，而是在失去焦点或者按回车时才会更新，类似懒加载</p>
 <h3 id="1-6-指令修饰符"><a href="#1-6-指令修饰符" class="headerlink" title="1.6.指令修饰符"></a>1.6.指令修饰符</h3><ul>
 <li>通过 “.” 指明一些指令 后缀，不同 后缀 封装了不同的处理操作 → 简化代码</li>
 <li>① 按键修饰符<ul>
@@ -426,5 +443,119 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
 <li>​        快捷键：ctrl + g</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>//git.html</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="1．什么是-Git-仓库"><a href="#1．什么是-Git-仓库" class="headerlink" title="1．什么是 Git 仓库?"></a>1．什么是 Git 仓库?</h2><p>记录文件状态内容和历史记录的地方(.git文件夹)</p>
+<h2 id="2．如何创建Git仓库"><a href="#2．如何创建Git仓库" class="headerlink" title="2．如何创建Git仓库?"></a>2．如何创建Git仓库?</h2><p>1.把本地文件夹转换成Git仓库:命令git init</p>
+<p>2.从其他服务器上克隆Git仓库</p>
+<h2 id="3-Git的三个区域"><a href="#3-Git的三个区域" class="headerlink" title="3 .    Git的三个区域"></a>3 .    Git的三个区域</h2><p>Git 使用时:</p>
+<p>工作区:实际开发时操作的文件夹</p>
+<p>暂存区:保存之前的准备区域（暂存改动过的文件)</p>
+<p>版本库:提交并保存暂存区中的内容，产生一个版本快照</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git add 文件名</td>
+<td>暂存指定文件</td>
+</tr>
+<tr>
+<td>git add .</td>
+<td>保存到暂存区，暂存所有改动的文件</td>
+</tr>
+<tr>
+<td>git commit -m “注释说明”</td>
+<td>保存到版本库，提交并保存，产生版本快照</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img src="https://s2.loli.net/2023/08/27/SpN3vhQYbmdnBt9.png" alt="img"></p>
+<h2 id="4-Git文件状态"><a href="#4-Git文件状态" class="headerlink" title="4 .    Git文件状态"></a>4 .    Git文件状态</h2><p>Git文件2种状态:</p>
+<p>未跟踪:新文件，从未被Git管理过</p>
+<p>已跟踪:Git已经知道和管理的文件（新添加，未修改，已修改）</p>
+<p>使用:修改文件，暂存，提交保存记录，如此反复</p>
+<ul>
+<li>使用git status -s查看文件状态</li>
+<li>第一列是暂存区状态</li>
+<li>第二列是工作区状态</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>文件状态</th>
+<th>概念</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>未跟踪（U）</td>
+<td>从未被Git管理过</td>
+<td>新文件</td>
+</tr>
+<tr>
+<td>新添加（A）</td>
+<td>第一次被Git暂存</td>
+<td>之前版本记录无此文件</td>
+</tr>
+<tr>
+<td>未修改（’’）</td>
+<td>三个区域统一</td>
+<td>提交后保存</td>
+</tr>
+<tr>
+<td>已修改（M）</td>
+<td>工作区内容无变化</td>
+<td>修改了内容产生</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="5-Git暂存区使用"><a href="#5-Git暂存区使用" class="headerlink" title="5 .    Git暂存区使用"></a>5 .    Git暂存区使用</h2><p>暂存区:暂时存储，可以临时恢复代码内容，与版本库解耦</p>
+<p>暂存区-&gt;覆盖-&gt;工作区，命令: git restore目标文件（注意∶完全确认覆盖时使用)</p>
+<p>从暂存区移除文件，命令: git rm —cached目标文件</p>
+<p>查看暂存区的内容，命令：git ls-files</p>
+<p>查看之前所有的提交历史，命令：git log —oneline</p>
+<p><img src="https://s2.loli.net/2023/08/27/8ys6h3CiZSFlkgf.png" alt="image-20230827133555585"></p>
+<h2 id="6-Git回退版本"><a href="#6-Git回退版本" class="headerlink" title="6 .    Git回退版本"></a>6 .    Git回退版本</h2><p>概念:把版本库某个版本对应的内容快照，恢复到工作区/暂存区查看</p>
+<p>提交历史:git log —oneline</p>
+<p>查看所有的历史:git reflog —oneline</p>
+<p>回退命令:</p>
+<p>git reset —soft 版本号（其他文件未跟踪)    css，js暂存区工作区全部保留</p>
+<p>git reset —hard 版本号    css，js暂存区工作区不保留直接删除，先恢复暂存区，再恢复工作区</p>
+<p>git reset —mixed版本号(与git reset等价)    暂存区不保留，工作区保留</p>
+<p>注意1:只有记录在版本库的提交记录才能恢复<br>注意2:回退后，继续修改-&gt;暂存-&gt;提交操作即可（产生新的提交记录过程)</p>
+<h2 id="7-分支"><a href="#7-分支" class="headerlink" title="7 .    分支"></a>7 .    分支</h2><p>概念:本质上是指向提交节点的可变指针，默认名字是master</p>
+<p>注意:HEAD指针影响工作区/暂存区的代码状态，指向哪个分支使用哪个分支</p>
+<p>场景:开发新需求/修复Bug，保证主线代码随时可用，多人协同开发提高效率</p>
+<h3 id="1-创建分支"><a href="#1-创建分支" class="headerlink" title="1 . 创建分支"></a>1 . 创建分支</h3><p>1.创建分支命令:git branch 分支名，以HEAD指针指向的分支作为起点来创建分支</p>
+<p>2.切换分支命令:git checkout 分支名，使HEAD指向这个分支，就能来操控这个分支</p>
+<h3 id="2-合并并删除"><a href="#2-合并并删除" class="headerlink" title="2 .  合并并删除"></a>2 .  合并并删除</h3><p>1．切回到要合入的分支上: git checkout master</p>
+<p>2．合并其他分支过来:git merge login-bug</p>
+<p>3．删除合并后的分支指针: git branch -d login-bug</p>
+<p>第二个分支合并：合并提交，发生于原分支产生了新的提交记录后，再合并回去时发生，自动使用多个快照记录合并后产生一次新的提交</p>
+<p><img src="https://s2.loli.net/2023/08/27/39qTPKuyeYSEJsf.png" alt="QQ图片20230827202417"></p>
+<p>注意:提交记录的顺序按照产生的先后顺序排列，而非合并的先后顺序</p>
+<p><img src="https://s2.loli.net/2023/08/27/GJaUh5bkmH2xVnv.png" alt="image-20230827202532657"></p>
+<h1 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h1><p><img src="https://s2.loli.net/2023/08/27/V1HzftLTnRh9dcF.png" alt="QQ图片20230827211901"></p>
+<p><img src="https://s2.loli.net/2023/08/27/d1i3QAqLgbVNo79.png" alt="QQ图片20230827211907"></p>
+<p><img src="https://s2.loli.net/2023/08/31/YKAMmq1GZoaVCe7.png" alt="QQ图片20230831120423"></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
   </entry>
 </search>
