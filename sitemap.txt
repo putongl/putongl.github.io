@@ -1,3 +1,4 @@
+http://putongl.github.io/Python.html
 http://putongl.github.io/vue.html
 http://putongl.github.io/git.html
 http://putongl.github.io/2.html
@@ -13,4 +14,5 @@ http://putongl.github.io/
 http://putongl.github.io/tags/Vue/
 http://putongl.github.io/tags/js/
 http://putongl.github.io/tags/Git/
+http://putongl.github.io/tags/Python/
 http://putongl.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
