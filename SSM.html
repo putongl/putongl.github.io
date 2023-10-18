@@ -1,0 +1,1366 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>SSM | 普通l</title><meta name="author" content="普通L"><meta name="copyright" content="普通L"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="三大框架1.Spring简介1. Spring是什么​    Spring是分层的 Java SE&#x2F;EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control：反转控制）和AOP（Aspect OrientedProgramming：面向切面编程）为内核。提供了展现层 SpringMVC 和持久层 Spring JDBCTemplate 以及业务层事务管理等众">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSM">
+<meta property="og:url" content="http://putongl.github.io/SSM.html">
+<meta property="og:site_name" content="普通l">
+<meta property="og:description" content="三大框架1.Spring简介1. Spring是什么​    Spring是分层的 Java SE&#x2F;EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control：反转控制）和AOP（Aspect OrientedProgramming：面向切面编程）为内核。提供了展现层 SpringMVC 和持久层 Spring JDBCTemplate 以及业务层事务管理等众">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://putongl.github.io/img/head.jpg">
+<meta property="article:published_time" content="2023-10-18T08:20:25.329Z">
+<meta property="article:modified_time" content="2023-10-18T08:18:15.825Z">
+<meta property="article:author" content="普通L">
+<meta property="article:tag" content="SSM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://putongl.github.io/img/head.jpg"><link rel="shortcut icon" href="/img/top.jpg"><link rel="canonical" href="http://putongl.github.io/SSM.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SSM',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-18 16:18:15'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="普通l" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tags"></i><span> 资源合集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://code.haiyong.site/"><i class="fa-fw fas fa-tools"></i><span> 免费资源</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com/"><i class="fa-fw fas fa-gamepad"></i><span> ChatGpt</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://ai-bot.cn/"><i class="fa-fw fas fa-anchor"></i><span> AI工具集</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xiaozhongjishu.com/"><i class="fa-fw fas fa-folder-open"></i><span> 导航网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 导航</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://haiyong.site/doc/"><i class="fa-fw fas fa-folder-open"></i><span> 学习资料</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-fish"></i><span> 摸鱼</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.4399.com/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.douyin.com/"><i class="fa-fw fas fa-anchor"></i><span> 抖音</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.yinghuavideo.com/"><i class="fa-fw fas fa-gamepad"></i><span> 动漫</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bilibili.com/"><i class="fa-fw fas fa-anchor"></i><span> B站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog-info"><a href="/" title="普通l"><span class="site-name">普通l</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-tags"></i><span> 资源合集</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://code.haiyong.site/"><i class="fa-fw fas fa-tools"></i><span> 免费资源</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://chat.openai.com/"><i class="fa-fw fas fa-gamepad"></i><span> ChatGpt</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://ai-bot.cn/"><i class="fa-fw fas fa-anchor"></i><span> AI工具集</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.xiaozhongjishu.com/"><i class="fa-fw fas fa-folder-open"></i><span> 导航网站</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 导航</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://haiyong.site/doc/"><i class="fa-fw fas fa-folder-open"></i><span> 学习资料</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-fish"></i><span> 摸鱼</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.4399.com/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.douyin.com/"><i class="fa-fw fas fa-anchor"></i><span> 抖音</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="http://www.yinghuavideo.com/"><i class="fa-fw fas fa-gamepad"></i><span> 动漫</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://www.bilibili.com/"><i class="fa-fw fas fa-anchor"></i><span> B站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">SSM</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-18T08:20:25.329Z" title="发表于 2023-10-18 16:20:25">2023-10-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-18T08:18:15.825Z" title="更新于 2023-10-18 16:18:15">2023-10-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="SSM"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="三大框架"><a href="#三大框架" class="headerlink" title="三大框架"></a>三大框架</h1><h2 id="1-Spring简介"><a href="#1-Spring简介" class="headerlink" title="1.Spring简介"></a>1.Spring简介</h2><h3 id="1-Spring是什么"><a href="#1-Spring是什么" class="headerlink" title="1. Spring是什么"></a>1. Spring是什么</h3><p>​    Spring是分层的 Java SE/EE应用 full-stack 轻量级开源框架，以 IoC（Inverse Of Control：反转控制）和AOP（Aspect OrientedProgramming：面向切面编程）为内核。提供了展现层 SpringMVC 和持久层 Spring JDBCTemplate 以及业务层事务管理等众多的企业级应用技术，还能整合开源世界众多著名的第三方框架和类库，逐渐成为使用最多的Java EE 企业应用开源框架</p>
+<p>1.3 Spring的优势</p>
+<p>​    1）方便解耦，简化开发</p>
+<p>​        通过 Spring 提供的 IoC容器，可以将对象间的依赖关系交由 Spring 进行控制，避免硬编码所造成的过度耦合。</p>
+<p>​        用户也不必再为单例模式类、属性文件解析等这些很底层的需求编写代码，可以更专注于上层的应用。</p>
+<p>​    2）AOP 编程的支持</p>
+<p>​        通过 Spring的 AOP 功能，方便进行面向切面编程，许多不容易用传统 OOP 实现的功能可以通过 AOP 轻松实现。</p>
+<p>​    3）声明式事务的支持</p>
+<p>​        可以将我们从单调烦闷的事务管理代码中解脱出来，通过声明式方式灵活的进行事务管理，提高开发效率和质量。</p>
+<p>​    4）方便程序的测试</p>
+<p>​        可以用非容器依赖的编程方式进行几乎所有的测试工作，测试不再是昂贵的操作，而是随手可做的事情</p>
+<h3 id="2-Spring快速入门"><a href="#2-Spring快速入门" class="headerlink" title="2.Spring快速入门"></a>2.Spring快速入门</h3><p>​        ① 导入 Spring 开发的基本包坐标</p>
+<p>​        ② 编写 Dao 接口和实现类</p>
+<p>​        ③ 创建 Spring 核心配置文件</p>
+<p>​        ④ 在 Spring 配置文件中配置 UserDaoImpl</p>
+<p>​        ⑤ 使用 Spring 的 API 获得 Bean 实例</p>
+<p>Spring的开发步骤</p>
+<p>​        ① 导入坐标</p>
+<p>​        ② 创建Bean</p>
+<p>​        ③ 创建applicationContext.xml</p>
+<p>​        ④ 在配置文件中进行配置</p>
+<p>​        ⑤ 创建ApplicationContext对象getBean</p>
+<h3 id="3-Spring配置文件"><a href="#3-Spring配置文件" class="headerlink" title="3.Spring配置文件"></a>3.Spring配置文件</h3><p>3.1 Bean标签基本配置</p>
+<p>​    用于配置对象交由Spring 来创建。</p>
+<p>​    默认情况下它调用的是类中的无参构造函数，如果没有无参构造函数则不能创建成功。</p>
+<p>​    基本属性：</p>
+<p>​        id：Bean实例在Spring容器中的唯一标识</p>
+<p>​        class：Bean的全限定名称</p>
+<p>3.2 Bean标签范围配置</p>
+<p>scope：指对象的作用范围，取值如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>取值范围</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>singleton</td>
+<td>默认值，单例的</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>多例的</td>
+</tr>
+<tr>
+<td>request</td>
+<td>WEB 项目中，Spring 创建一个 Bean 的对象，将对象存入到 request 域中</td>
+</tr>
+<tr>
+<td>session</td>
+<td>WEB 项目中，Spring 创建一个 Bean 的对象，将对象存入到 session 域中</td>
+</tr>
+<tr>
+<td>global session</td>
+<td>WEB 项目中，应用在 Portlet 环境，如果没有 Portlet 环境那么globalSession 相当于 session</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>1）当scope的取值为singleton时</p>
+<p>​    Bean的实例化个数：1个</p>
+<p>​    Bean的实例化时机：当Spring核心文件被加载时，实例化配置的Bean实例        加载核心配置文件时创建</p>
+<p>Bean的生命周期：</p>
+<p>​    对象创建：当应用加载，创建容器时，对象就被创建了</p>
+<p>​    对象运行：只要容器在，对象一直活着</p>
+<p>​    对象销毁：当应用卸载，销毁容器时，对象就被销毁了</p>
+<p>2）当scope的取值为prototype时</p>
+<p>​    Bean的实例化个数：多个</p>
+<p>​    Bean的实例化时机：当调用getBean()方法时实例化Bean</p>
+<p>​    对象创建：当使用对象时，创建新的对象实例</p>
+<p>​    对象运行：只要对象在使用中，就一直活着</p>
+<p>​    对象销毁：当对象长时间不用时，被 Java 的垃圾回收器回收了</p>
+<p>3.3 Bean生命周期配置</p>
+<p>​    init-method：指定类中的初始化方法名称</p>
+<p>​    destroy-method：指定类中销毁方法名称</p>
+<p>3.4 Bean实例化三种方式</p>
+<p>​    无参构造方法实例化</p>
+<p>​    工厂静态方法实例化</p>
+<p>​        工厂实例方法实例化</p>
+<p>3.7 Bean的依赖注入概念</p>
+<p>​    依赖注入（Dependency Injection）：它是 Spring 框架核心 IOC 的具体实现。</p>
+<p>​    在编写程序时，通过控制反转，把对象的创建交给了 Spring，但是代码中不可能出现没有依赖的情况。</p>
+<p>​    IOC 解耦只是降低他们的依赖关系，但不会消除。例如：业务层仍会调用持久层的方法。</p>
+<p>​    那这种业务层和持久层的依赖关系，在使用 Spring 之后，就让 Spring 来维护了。</p>
+<p>​    简单的说，就是坐等框架把持久层对象传入业务层，而不用我们自己去获取。</p>
+<p>Bean的依赖注入方式</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>构造方法</th>
+<th>set方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>构造注入</td>
+<td>name表示构造方法形参列表的参数名</td>
+</tr>
+<tr>
+<td>set注入</td>
+<td>name表示set方法的后缀名称</td>
+</tr>
+<tr>
+<td>ref</td>
+<td>引用容器中bean的id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Spring的重点配置</p>
+<p>标签</p>
+<p>​    id属性:在容器中Bean实例的唯一标识，不允许重复</p>
+<p>​    class属性:要实例化的Bean的全限定名</p>
+<p>​    scope属性:Bean的作用范围，常用是Singleton(默认)和prototype</p>
+<p>标签：属性注入</p>
+<p>​    name属性：属性名称</p>
+<p>​    value属性：注入的普通属性值</p>
+<p>​    ref属性：注入的对象引用值</p>
+<p>​    <code>&lt;list&gt;</code>标签</p>
+<p>​    <code>&lt;map&gt;</code>标签</p>
+<p>​    <code>&lt;properties&gt;</code>标签</p>
+<p>​    <code>&lt;constructor-arg&gt;</code>构造标签    相当于<code>&lt;bean&gt;</code>标签</p>
+<p>​    <code>&lt;import&gt;</code>标签:导入其他的Spring的分文件</p>
+<h3 id="4-Spring相关API"><a href="#4-Spring相关API" class="headerlink" title="4.Spring相关API"></a>4.Spring相关API</h3><p>4.2 ApplicationContext的实现类</p>
+<p>​    1）ClassPathXmlApplicationContext</p>
+<p>​        它是从类的根路径下加载配置文件 推荐使用这种</p>
+<p>​    2）FileSystemXmlApplicationContext</p>
+<p>​        它是从磁盘路径上加载配置文件，配置文件可以在磁盘的任意位置。</p>
+<p>​    3）AnnotationConfigApplicationContext</p>
+<p>​        当使用注解配置容器对象时，需要使用此类来创建 spring 容器。它用来读取注解。</p>
+<p>4.3 getBean()方法</p>
+<p>​    1.传标签的id        适用于一个类型多个bean</p>
+<p>​        使用当参数的数据类型是字符串时，表示根据Bean的id从容器中获得Bean实例，返回是Object，需要强转。</p>
+<p>​    2.传字节码对象类型        适用于一个类型一个bean，当存在一个类型多个bean时分辨不出来，不能使用</p>
+<p>​        当参数的数据类型是Class类型时，表示根据类型从容器中匹配Bean实例，当容器中相同类型的Bean有多个时，则此方法会报错</p>
+<h2 id="2-Spring配置数据源"><a href="#2-Spring配置数据源" class="headerlink" title="2.Spring配置数据源"></a>2.Spring配置数据源</h2><h3 id="1-数据源（连接池）的作用"><a href="#1-数据源（连接池）的作用" class="headerlink" title="1.数据源（连接池）的作用"></a>1.数据源（连接池）的作用</h3><p>​    常见的数据源(连接池)：DBCP、C3P0、BoneCP、Druid等</p>
+<p>1.2抽取jdbc配置文件</p>
+<p>​    applicationContext.xml加载jdbc.properties配置文件获得连接信息。</p>
+<p>​    首先，需要引入context命名空间和约束路径：</p>
+<p>​    命名空间：xmlns:context=”<a target="_blank" rel="noopener" href="http://www.springframework.org/schema/context">http://www.springframework.org/schema/context</a>“</p>
+<p>​    约束路径：</p>
+<p>​        <a target="_blank" rel="noopener" href="http://www.springframework.org/schema/context">http://www.springframework.org/schema/context</a></p>
+<p>​        <a target="_blank" rel="noopener" href="http://www.springframework.org/schema/context/spring-context.xsd">http://www.springframework.org/schema/context/spring-context.xsd</a></p>
+<p>1.5 知识要点</p>
+<p>Spring容器加载properties文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:property-placeholder location=&quot;xx.properties&quot;/&gt;</span><br><span class="line">&lt;property name=&quot;&quot; value=&quot;$&#123;key&#125;&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2-Spring注解开发"><a href="#2-Spring注解开发" class="headerlink" title="2.Spring注解开发"></a>2.Spring注解开发</h3><p>2.1 Spring原始注解</p>
+<p>Spring原始注解主要是替代的配置</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Component</td>
+<td>使用在类上用于实例化Bean</td>
+</tr>
+<tr>
+<td>@Controller</td>
+<td>使用在web层类上用于实例化Bean</td>
+</tr>
+<tr>
+<td>@Service</td>
+<td>使用在service层类上用于实例化Bean</td>
+</tr>
+<tr>
+<td>@Repository</td>
+<td>使用在dao层类上用于实例化Bean</td>
+</tr>
+<tr>
+<td>@Autowired</td>
+<td>使用在字段上用于根据类型依赖注入</td>
+</tr>
+<tr>
+<td>@Qualifier</td>
+<td>结合@Autowired一起使用用于根据名称进行依赖注入</td>
+</tr>
+<tr>
+<td>@Resource</td>
+<td>相当于@Autowired+@Qualifier，按照名称进行注入</td>
+</tr>
+<tr>
+<td>@Value</td>
+<td>注入普通属性</td>
+</tr>
+<tr>
+<td>@Scope</td>
+<td>标注Bean的作用范围</td>
+</tr>
+<tr>
+<td>@PostConstruct</td>
+<td>使用在方法上标注该方法是Bean的初始化方法</td>
+</tr>
+<tr>
+<td>@PreDestroy</td>
+<td>使用在方法上标注该方法是Bean的销毁方法</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>2.2 Spring新注解</p>
+<p>使用上面的注解还不能全部替代xml配置文件，还需要使用注解替代的配置如下：</p>
+<p>​    非自定义的Bean的配置：<code>&lt;bean&gt;</code></p>
+<p>​    加载properties文件的配置：<code>&lt;context:property-placeholder&gt;</code></p>
+<p>​    组件扫描的配置：<code>&lt;context:component-scan&gt;</code></p>
+<p>​    引入其他文件：<code>&lt;import&gt;</code></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Configuration</td>
+<td>Spring的核心配置类        总    -&gt;    分</td>
+</tr>
+<tr>
+<td>@ComponentScan</td>
+<td>扫描     跟xml中一样</td>
+</tr>
+<tr>
+<td>@Bean</td>
+<td>使用在方法上，标注将该方法的返回值存储到 Spring 容器中</td>
+</tr>
+<tr>
+<td>@PropertySource</td>
+<td>用于加载.properties 文件中的配置</td>
+</tr>
+<tr>
+<td>@Import</td>
+<td>导入分类        用于导入其他配置类</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="3-Spring集成Junit"><a href="#3-Spring集成Junit" class="headerlink" title="3.Spring集成Junit"></a>3.Spring集成Junit</h3><p>3.1 原始Junit测试Spring的问题</p>
+<p>​    在测试类中，每个测试方法都有以下两行代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ac</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;bean.xml&quot;</span>);</span><br><span class="line"><span class="type">IAccountService</span> <span class="variable">as</span> <span class="operator">=</span> ac.getBean(<span class="string">&quot;accountService&quot;</span>,IAccountService.class);</span><br></pre></td></tr></table></figure>
+<p>这两行代码的作用是获取容器，如果不写的话，直接会提示空指针异常。所以又不能轻易删掉。</p>
+<p>3.3 Spring集成Junit步骤</p>
+<p>​    ① 导入spring集成Junit的坐标</p>
+<p>​    ② 使用@Runwith注解替换原来的运行期</p>
+<p>​    ③ 使用@ContextConfiguration指定配置文件或配置类</p>
+<p>​    ④ 使用@Autowired注入需要测试的对象</p>
+<p>​    ⑤ 创建测试方法进行测试</p>
+<h2 id="3-SpringMVC入门"><a href="#3-SpringMVC入门" class="headerlink" title="3.SpringMVC入门"></a>3.SpringMVC入门</h2><h3 id="1-Spring集成web环境"><a href="#1-Spring集成web环境" class="headerlink" title="1.Spring集成web环境"></a>1.Spring集成web环境</h3><p>1.1 ApplicationContext应用上下文获取方式</p>
+<p>​    应用上下文对象是通过new ClasspathXmlApplicationContext(spring配置文件) 方式获取的，但是每次从容器中获得Bean时都要编写new ClasspathXmlApplicationContext(spring配置文件) ，这样的弊端是配置文件加载多次，应用上下文对象创建多次。</p>
+<p>​    在Web项目中，可以使用ServletContextListener监听Web应用的启动，我们可以在Web应用启动时，就加载Spring的配置文件，创建应用上下文对象ApplicationContext，在将其存储到最大的域servletContext域中，这样就可以在任意位置从域中获得应用上下文ApplicationContext对象了</p>
+<p>1.2 Spring提供获取应用上下文的工具上面的分析不用手动实现，Spring提供了一个监听器ContextLoaderListener就是对上述功能的封装，该监听器内部加载Spring配置文件，创建应用上下文对象，并存储到ServletContext域中，提供了一个客户端工具WebApplicationContextUtils供使用者获得应用上下文对象。</p>
+<p>所以我们需要做的只有两件事：</p>
+<p>​    ① 在web.xml中配置ContextLoaderListener监听器（导入spring-web坐标）</p>
+<p>​    ② 使用WebApplicationContextUtils获得应用上下文对象ApplicationContext</p>
+<p>1.5 知识要点</p>
+<p>Spring集成web环境步骤</p>
+<p>​    ① 配置ContextLoaderListener监听器</p>
+<p>​    ② 使用WebApplicationContextUtils获得应用上下文</p>
+<h3 id="2-SpringMVC-简介"><a href="#2-SpringMVC-简介" class="headerlink" title="2.SpringMVC 简介"></a>2.SpringMVC 简介</h3><p>2.1 SpringMVC概述</p>
+<p>​    SpringMVC 是一种基于 Java 的实现 MVC 设计模型的请求驱动类型的轻量级 Web 框架，属于SpringFrameWork 的后续产品，已经融合在 Spring Web Flow 中。</p>
+<p>​    SpringMVC 已经成为目前最主流的MVC框架之一，并且随着Spring3.0 的发布，全面超越 Struts2，成为最优秀的 MVC 框架。它通过一套注解，让一个简单的 Java 类成为处理请求的控制器，而无须实现任何接口。同时它还支持 RESTful 编程风格的请求。</p>
+<p>2.3 SpringMVC快速入门</p>
+<p>需求：客户端发起请求，服务器端接收请求，执行逻辑并进行视图跳转。</p>
+<p>开发步骤：</p>
+<p>​    ① 导入SpringMVC相关坐标</p>
+<p>​    ② 配置SpringMVC核心控制器DispathcerServlet</p>
+<p>​    ③ 创建Controller类和视图页面</p>
+<p>​    ④ 使用注解配置Controller类中业务方法的映射地址</p>
+<p>​    ⑤ 配置SpringMVC核心文件 spring-mvc.xml</p>
+<p>​    ⑥ 客户端发起请求测试</p>
+<p>2.4 知识要点</p>
+<p>​    SpringMVC的开发步骤</p>
+<p>​    ① 导入SpringMVC相关坐标</p>
+<p>​    ② 配置SpringMVC核心控制器DispathcerServlet</p>
+<p>​    ③ 创建Controller类和视图页面</p>
+<p>​    ④ 使用注解配置Controller类中业务方法的映射地址</p>
+<p>​    ⑤ 配置SpringMVC核心文件 spring-mvc.xml</p>
+<p>​    ⑥ 客户端发起请求测试</p>
+<h3 id="3-SpringMVC组件解析"><a href="#3-SpringMVC组件解析" class="headerlink" title="3.SpringMVC组件解析"></a>3.SpringMVC组件解析</h3><ol>
+<li>前端控制器：DispatcherServlet</li>
+</ol>
+<p>​    用户请求到达前端控制器，它就相当于 MVC 模式中的 C，DispatcherServlet 是整个流程控制的中心，由它调用其它组件处理用户的请求，DispatcherServlet 的存在降低了组件之间的耦合性。</p>
+<ol>
+<li>处理器映射器：HandlerMapping</li>
+</ol>
+<p>​    HandlerMapping 负责根据用户请求找到 Handler 即处理器，SpringMVC 提供了不同的映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。</p>
+<ol>
+<li>处理器适配器：HandlerAdapter</li>
+</ol>
+<p>​    通过 HandlerAdapter 对处理器进行执行，这是适配器模式的应用，通过扩展适配器可以对更多类型的处理器进行执行。</p>
+<ol>
+<li>处理器：Handler</li>
+</ol>
+<p>​    它就是我们开发中要编写的具体业务控制器。由 DispatcherServlet 把用户请求转发到 Handler。由Handler 对具体的用户请求进行处理。</p>
+<ol>
+<li>视图解析器：View Resolver</li>
+</ol>
+<p>​    View Resolver 负责将处理结果生成 View 视图，View Resolver 首先根据逻辑视图名解析成物理视图名，即具体的页面地址，再生成 View 视图对象，最后对 View 进行渲染将处理结果通过页面展示给用户。</p>
+<ol>
+<li>视图：View</li>
+</ol>
+<p>​    SpringMVC 框架提供了很多的 View 视图类型的支持，包括：jstlView、freemarkerView、pdfView等。最常用的视图就是 jsp。一般情况下需要通过页面标签或页面模版技术将模型数据通过页面展示给用户，需要由程序员根据业务需求开发具体的页面</p>
+<h3 id="4-SpringMVC注解解析"><a href="#4-SpringMVC注解解析" class="headerlink" title="4.SpringMVC注解解析"></a>4.SpringMVC注解解析</h3><p>@RequestMapping</p>
+<p>​    作用：用于建立请求 URL 和处理请求方法之间的对应关系</p>
+<p>​    位置：</p>
+<p>​        类上，请求URL 的第一级访问目录。此处不写的话，就相当于应用的根目录</p>
+<p>​        方法上，请求 URL 的第二级访问目录，与类上的使用@ReqquestMapping标注的一级目录一起组成访问虚拟路径</p>
+<p>​    属性：</p>
+<p>​        value：用于指定请求的URL。它和path属性的作用是一样的</p>
+<p>​        method：用于指定请求的方式</p>
+<p>​        params：用于指定限制请求参数的条件。它支持简单的表达式。要求请求参数的key和value必须和配置的一模一样</p>
+<p>​    例如：</p>
+<p>​        params = {“accountName”}，表示请求参数必须有accountName</p>
+<p>​        params = {“moeny!100”}，表示请求参数中money不能是100</p>
+<ol>
+<li><p>mvc命名空间引入</p>
+</li>
+<li><p>组件扫描</p>
+</li>
+</ol>
+<p>​    SpringMVC基于Spring容器，所以在进行SpringMVC操作时，需要将Controller存储到Spring容器中，如果使用@Controller注解标注的话，就需要使用进行组件扫描。</p>
+<p>3.4 SpringMVC的XML配置解析</p>
+<p>​    视图解析器</p>
+<p>​    SpringMVC有默认组件配置，默认组件都是DispatcherServlet.properties配置文件中配置的，该配置文件地址org/springframework/web/servlet/DispatcherServlet.properties，该文件中配置了默认的视图解析器，如下：org.springframework.web.servlet.ViewResolver=org.springframework.web.servlet.view.InternalResourceViewResolver</p>
+<p>翻看该解析器源码，可以看到该解析器的默认设置，如下：</p>
+<p>​    REDIRECT_URL_PREFIX = “redirect:”     —重定向前缀</p>
+<p>​    FORWARD_URL_PREFIX = “forward:”         —转发前缀（默认值）</p>
+<p>​    prefix = “”; —视图名称前缀</p>
+<p>​    suffix = “”; —视图名称后缀</p>
+<h3 id="5-pringMVC的请求和响应"><a href="#5-pringMVC的请求和响应" class="headerlink" title="5.pringMVC的请求和响应"></a>5.pringMVC的请求和响应</h3><ol>
+<li>SpringMVC的数据响应</li>
+</ol>
+<p>1.1 SpringMVC的数据响应方式</p>
+<p>1） 页面跳转</p>
+<p>​    直接返回字符串</p>
+<p>​    通过ModelAndView对象返回</p>
+<p>2） 回写数据</p>
+<p>​    直接返回字符串</p>
+<p>​    返回对象或集合</p>
+<p>1.3 回写数据</p>
+<p>返回对象或集合</p>
+<p>​    在方法上添加@ResponseBody就可以返回json格式的字符串，但是这样配置比较麻烦，配置的代码比较多，因此，我们可以使用mvc的注解驱动代替上述配置。</p>
+<p>​    在 SpringMVC 的各个组件中，处理器映射器、处理器适配器、视图解析器称为 SpringMVC 的三大组件。</p>
+<p>​    使用自动加载 RequestMappingHandlerMapping（处理映射器）和RequestMappingHandlerAdapter（ 处 理 适 配 器 ），可用在Spring-xml.xml配置文件中使用替代注解处理器和适配器的配置。</p>
+<p>​    同时使用默认底层就会集成jackson进行对象或集合的json格式字符串的转换。</p>
+<ol>
+<li>SpringMVC 获得请求数据</li>
+</ol>
+<p>2.1 获得请求参数</p>
+<p>​    客户端请求参数的格式是：name=value&amp;name=value… …</p>
+<p>​    服务器端要获得请求的参数，有时还需要进行数据的封装，SpringMVC可以接收如下类型的参数：</p>
+<p>​        基本类型参数</p>
+<p>​        POJO类型参数</p>
+<p>​        数组类型参数</p>
+<p>​        集合类型参数</p>
+<p>2.2 获得基本类型参数</p>
+<p>​    Controller中的业务方法的参数名称要与请求参数的name一致，参数值会自动映射匹配。</p>
+<p>2.3 获得POJO类型参数</p>
+<p>​    Controller中的业务方法的POJO参数的属性名与请求参数的name一致，参数值会自动映射匹配。</p>
+<p>2.4 获得数组类型参数</p>
+<p>​    Controller中的业务方法数组名称与请求参数的name一致，参数值会自动映射匹配。</p>
+<p>2.5 获得集合类型参数</p>
+<p>​    获得集合参数时，要将集合参数包装到一个POJO中才可以。</p>
+<p>​    当使用ajax提交时，可以指定contentType为json形式，那么在方法参数位置使用@RequestBody可以直接接收集合数据而无需使用POJO进行包装。</p>
+<p>​    注意：通过谷歌开发者工具抓包发现，没有加载到jquery文件，原因是SpringMVC的前端控制器DispatcherServlet的url-pattern配置的是/,代表对所有的资源都进行过滤操作，我们可以通过以下两种方式指定放行静态资源：</p>
+<p>​        1.在spring-mvc.xml配置文件中指定放行的资源 </p>
+<p>​        2.使用标签</p>
+<p>2.6 请求数据乱码问题</p>
+<p>​    当post请求时，数据会出现乱码，我们可以设置一个过滤器来进行编码的过滤。</p>
+<p>2.7 参数绑定注解@requestParam</p>
+<p>​    当请求的参数名称与Controller的业务方法参数名称不一致时，就需要通过@RequestParam注解显示的绑定。</p>
+<p>​    注解@RequestParam还有如下参数可以使用：</p>
+<p>​        value：与请求参数名称</p>
+<p>​        required：此在指定的请求参数是否必须包括，默认是true，提交时如果没有此参数则报错</p>
+<p>​        defaultValue：当没有指定请求参数时，则使用指定的默认值赋值</p>
+<p>2.8 获得Restful风格的参数</p>
+<p>​    Restful是一种软件架构风格、设计风格，而不是标准，只是提供了一组设计原则和约束条件。主要用于客户端和服务器交互类的软件，基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存机制等。</p>
+<p>​    Restful风格的请求是使用“url+请求方式”表示一次请求目的的，HTTP 协议里面四个表示操作方式的动词如下：</p>
+<p>​        GET：用于获取资源</p>
+<p>​        POST：用于新建资源</p>
+<p>​        PUT：用于更新资源</p>
+<p>​        DELETE：用于删除资源</p>
+<p>​    例如：</p>
+<p>​        /user/1 GET ： 得到 id = 1 的 user</p>
+<p>​        /user/1 DELETE： 删除 id = 1 的 user</p>
+<p>​        /user/1 PUT： 更新 id = 1 的 user</p>
+<p>​        /user POST： 新增 user</p>
+<p>​    上述url地址/user/1中的1就是要获得的请求参数，在SpringMVC中可以使用占位符进行参数绑定。地址/user/1可以写成/user/{id}，占位符{id}对应的就是1的值。在业务方法中我们可以使用@PathVariable注解进行占位符的匹配获取工作。</p>
+<p>2.9 自定义类型转换器</p>
+<p>​    • SpringMVC 默认已经提供了一些常用的类型转换器，例如客户端提交的字符串转换成int型进行参数设置。</p>
+<p>​    • 但是不是所有的数据类型都提供了转换器，没有提供的就需要自定义转换器，例如：日期类型的数据就需要自定义转换器。</p>
+<p>自定义类型转换器的开发步骤：</p>
+<p>​    ① 定义转换器类实现Converter接口</p>
+<p>​    ② 在配置文件中声明转换器</p>
+<p>​    ③ 在中引用转换器</p>
+<p>2.10 获得Servlet相关API</p>
+<p>​    SpringMVC支持使用原始ServletAPI对象作为控制器方法的参数进行注入，常用的对象如下：</p>
+<p>​        HttpServletRequest</p>
+<p>​        HttpServletResponse</p>
+<p>​        HttpSession</p>
+<p>2.11 获得请求头</p>
+<ol>
+<li>@RequestHeader</li>
+</ol>
+<p>​    使用@RequestHeader可以获得请求头信息，相当于web阶段学习的request.getHeader(name)</p>
+<p>@RequestHeader注解的属性如下：</p>
+<p>​    value：请求头的名称</p>
+<p>​    required：是否必须携带此请求头</p>
+<ol>
+<li>@CookieValue</li>
+</ol>
+<p>​        使用@CookieValue可以获得指定Cookie的值</p>
+<p>​    @CookieValue注解的属性如下：</p>
+<p>​        value：指定cookie的名称</p>
+<p>​        required：是否必须携带此cookie</p>
+<p>2.12 文件上传</p>
+<ol>
+<li>文件上传客户端三要素</li>
+</ol>
+<p>​        表单项type=“file”</p>
+<p>​        表单的提交方式是post</p>
+<p>​        表单的enctype属性是多部分表单形式，及enctype=“multipart/form-data”</p>
+<ol>
+<li>文件上传原理</li>
+</ol>
+<p>​        当form表单修改为多部分表单时，request.getParameter()将失效。</p>
+<p>​        enctype=“application/x-www-form-urlencoded”时，form表单的正文内容格式是：</p>
+<p>​        key=value&amp;key=value&amp;key=value</p>
+<p>​        当form表单的enctype取值为Mutilpart/form-data时，请求正文内容就变成多部分形式：</p>
+<p>2.13 单文件上传步骤</p>
+<p>​    ① 导入fileupload和io坐标</p>
+<p>​    ② 配置文件上传解析器</p>
+<p>​    ③ 编写文件上传代码</p>
+<p>2.15 多文件上传实现    同一个文件名</p>
+<p>​    多文件上传，只需要将页面修改为多个文件上传项，将方法参数MultipartFile类型修改为MultipartFile[ ]即可</p>
+<ol>
+<li>Spring JdbcTemplate基本使用</li>
+</ol>
+<p>1.1 JdbcTemplate概述</p>
+<p>​    它是spring框架中提供的一个对象，是对原始繁琐的Jdbc API对象的简单封装。spring框架为我们提供了很多的操作模板类。例如操作关系型数据的JdbcTemplate和HibernateTemplate，操作nosql数据库的RedisTemplate，操作消息队列的JmsTemplate等等。</p>
+<p>1.2 JdbcTemplate开发步骤</p>
+<p>​    ① 导入spring-jdbc和spring-tx坐标</p>
+<p>​    ② 创建数据库表和实体</p>
+<p>​    ③ 创建JdbcTemplate对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">JdbcTemplate</span> <span class="variable">jdbcTemplate</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">JdbcTemplate</span>();</span><br><span class="line">jdbcTemplate.setDataSource(dataSource);</span><br></pre></td></tr></table></figure>
+<p>④ 执行数据库操作</p>
+<p>更新操作：</p>
+<p>​    jdbcTemplate.update (sql,params)</p>
+<p>查询操作：</p>
+<p>​    jdbcTemplate.query (sql,Mapper,params)</p>
+<p>​    jdbcTemplate.queryForObject(sql,Mapper,params)</p>
+<p>web层用注解  service层和dao层用配置文件</p>
+<h3 id="6-SpringMVC拦截器"><a href="#6-SpringMVC拦截器" class="headerlink" title="6.SpringMVC拦截器"></a>6.SpringMVC拦截器</h3><p>1.1 拦截器（interceptor）的作用</p>
+<p>​    Spring MVC 的拦截器类似于 Servlet 开发中的过滤器 Filter，用于对处理器进行预处理和后处理。将拦截器按一定的顺序联结成一条链，这条链称为拦截器链（Interceptor Chain）。在访问被拦截的方法或字段时，拦截器链中的拦截器就会按其之前定义的顺序被调用。拦截器也是AOP思想的具体实现。</p>
+<p>1.2 拦截器和过滤器区别</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th>过滤器（Filter）</th>
+<th>拦截器（Interceptor）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用范围</td>
+<td>是 servlet 规范中的一部分，任何Java Web 工程都可以使用</td>
+<td>是 SpringMVC 框架自己的，只有使用了SpringMVC 框架的工程才能用</td>
+</tr>
+<tr>
+<td>拦截范围</td>
+<td>在 url-pattern 中配置了/*之后，可以对所有要访问的资源拦截</td>
+<td>在中配置了/**之后，也可以多所有资源进行拦截，但是可以通过标签排除不需要拦截的资源</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>1.3 拦截器是快速入门</p>
+<p>自定义拦截器很简单，只有如下三步：</p>
+<p>​    ① 创建拦截器类实现HandlerInterceptor接口</p>
+<p>​    ② 配置拦截器</p>
+<p>​    ③ 测试拦截器的拦截效果</p>
+<p>1.4 多拦截器操作同上，在编写一个MyHandlerInterceptor2操作，测试执行顺序</p>
+<p>​    12    21    21        跟栈一样，先进后出，后进先出</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>preHandle()</td>
+<td>方法将在请求处理之前进行调用，该方法的返回值是布尔值Boolean类型的，当它返回为false 时，表示请求结束，后续的Interceptor 和Controller 都不会再执行；当返回值为true 时就会继续调用下一个Interceptor 的preHandle 方法</td>
+</tr>
+<tr>
+<td>postHandle()</td>
+<td>该方法是在当前请求进行处理之后被调用，前提是preHandle 方法的返回值为true 时才能被调用，且它会在DispatcherServlet 进行视图返回渲染之前被调用，所以我们可以在这个方法中对Controller 处理之后的ModelAndView 对象进行操作</td>
+</tr>
+<tr>
+<td>afterCompletion()</td>
+<td>该方法将在整个请求结束之后，也就是在DispatcherServlet 渲染了对应的视图之后执行，前提是preHandle 方法的返回值为true 时才能被调用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="7-SpringMVC异常处理机制"><a href="#7-SpringMVC异常处理机制" class="headerlink" title="7.SpringMVC异常处理机制"></a>7.SpringMVC异常处理机制</h3><ol>
+<li>SpringMVC异常处理</li>
+</ol>
+<p>1.1 异常处理的思路</p>
+<p>​    系统中异常包括两类：预期异常和运行时异常RuntimeException，前者通过捕获异常从而获取异常信息，后者主要通过规范代码开发、测试等手段减少运行时异常的发生。</p>
+<p>​    系统的Dao、Service、Controller出现都通过throws Exception向上抛出，最后由SpringMVC前端控制器交由异常处理器进行异常处理</p>
+<p>1.2 异常处理两种方式</p>
+<p>​    使用Spring MVC提供的简单异常处理器SimpleMappingExceptionResolver</p>
+<p>​    实现Spring的异常处理接口HandlerExceptionResolver 自定义自己的异常处理器</p>
+<p>​        ① 创建异常处理器类实现HandlerExceptionResolver</p>
+<p>​        ② 配置异常处理器</p>
+<p>​        ③ 编写异常页面</p>
+<p>​        ④ 测试异常跳转</p>
+<h2 id="4-面向切面编程AOP"><a href="#4-面向切面编程AOP" class="headerlink" title="4.面向切面编程AOP"></a>4.面向切面编程AOP</h2><h3 id="1-Spring-的-AOP-简介"><a href="#1-Spring-的-AOP-简介" class="headerlink" title="1. Spring 的 AOP 简介"></a>1. Spring 的 AOP 简介</h3><p>1.1 什么是 AOP</p>
+<p>​    AOP 为 Aspect Oriented Programming 的缩写，意思为面向切面编程，是通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。</p>
+<p>​    动态代理：解耦合，不改变源码的同时，增强原方法的功能</p>
+<p>​    AOP 是 OOP 的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率</p>
+<p>1.2 AOP 的作用及其优势</p>
+<p>​    作用：在程序运行期间，在不修改源码的情况下对方法进行功能增强</p>
+<p>​    优势：减少重复代码，提高开发效率，并且便于维护</p>
+<p>1.3 AOP 的底层实现</p>
+<p>​    实际上，AOP 的底层是通过 Spring 提供的的动态代理技术实现的。在运行期间，Spring通过动态代理技术动态的生成代理对象，代理对象方法执行时进行增强功能的介入，在去调用目标对象的方法，从而完成功能的增强。</p>
+<p>1.4 AOP 的动态代理技术</p>
+<p>​    常用的动态代理技术</p>
+<p>​    JDK 代理 : 基于接口的动态代理技术</p>
+<p>​    cglib 代理：基于父类的动态代理技术</p>
+<p>1.7 AOP 相关概念</p>
+<p>​    Spring 的 AOP 实现底层就是对上面的动态代理的代码进行了封装，封装后我们只需要对需要关注的部分进行代码编写，并通过配置的方式完成指定目标的方法增强。</p>
+<p>​    在正式讲解 AOP 的操作之前，我们必须理解 AOP 的相关术语，常用的术语如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Target（目标对象）</th>
+<th>代理的目标对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proxy （代理）</td>
+<td>一个类被 AOP 织入增强后，就产生一个结果代理类</td>
+</tr>
+<tr>
+<td>Joinpoint（连接点）</td>
+<td>所谓连接点是指那些被拦截到的点。在spring中,这些点指的是方法，因为spring只支持方法类型的连接点<br />可以被增强的方法叫做连接点</td>
+</tr>
+<tr>
+<td>Pointcut（切入点）</td>
+<td>所谓切入点是指我们要对哪些 Joinpoint 进行拦截的定义<br />需要被增强的方法</td>
+</tr>
+<tr>
+<td>Advice（通知/ 增强）</td>
+<td>所谓通知是指拦截到 Joinpoint 之后所要做的事情就是通知<br />增强的方法</td>
+</tr>
+<tr>
+<td>Aspect（切面）</td>
+<td>是切入点和通知（引介）的结合</td>
+</tr>
+<tr>
+<td>Weaving（织入）</td>
+<td>是指把增强应用到目标对象来创建新的代理对象的过程。spring采用动态代理织入，而AspectJ采用编译期织入和类装载期织入<br />将切点和通知结合的过程</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>1.8 AOP 开发明确的事项</p>
+<ol>
+<li>需要编写的内容</li>
+</ol>
+<p>​    编写核心业务代码（目标类的目标方法）</p>
+<p>​    编写切面类，切面类中有通知(增强功能方法)</p>
+<p>​    在配置文件中，配置织入关系，即将哪些通知与哪些连接点进行结合</p>
+<ol>
+<li>AOP 技术实现的内容</li>
+</ol>
+<p>​    Spring 框架监控切入点方法的执行。一旦监控到切入点方法被运行，使用代理机制，动态创建目标对象的代理对象，根据通知类别，在代理对象的对应位置，将通知对应的功能织入，完成完整的代码逻辑运行。</p>
+<ol>
+<li>AOP 底层使用哪种代理方式</li>
+</ol>
+<p>​    在 spring 中，框架会根据目标类是否实现了接口来决定采用哪种动态代理的方式</p>
+<p>1.9 知识要点</p>
+<p>​    aop：面向切面编程</p>
+<p>​    aop底层实现：基于JDK的动态代理 和 基于Cglib的动态代理</p>
+<p>​    aop的重点概念：</p>
+<p>​        Pointcut（切入点）：被增强的方法</p>
+<p>​        Advice（通知/ 增强）：封装增强业务逻辑的方法</p>
+<p>​        Aspect（切面）：切点+通知</p>
+<p>​        Weaving（织入）：将切点与通知结合的过程</p>
+<p>​    开发明确事项：</p>
+<p>​        谁是切点（切点表达式配置）</p>
+<p>​        谁是通知（切面类中的增强方法）</p>
+<p>​        将切点和通知进行织入配置</p>
+<h3 id="2-基于-XML-的-AOP-开发"><a href="#2-基于-XML-的-AOP-开发" class="headerlink" title="2.基于 XML 的 AOP 开发"></a>2.基于 XML 的 AOP 开发</h3><p>2.1 快速入门</p>
+<p>​    ① 导入 AOP 相关坐标</p>
+<p>​    ② 创建目标接口和目标类（内部有切点）</p>
+<p>​    ③ 创建切面类（内部有增强方法）</p>
+<p>​    ④ 将目标类和切面类的对象创建权交给 spring</p>
+<p>​    ⑤ 在 applicationContext.xml 中配置织入关系</p>
+<p>​    ⑥ 测试代码</p>
+<p>2.2 XML 配置 AOP 详解</p>
+<ol>
+<li>切点表达式的写法</li>
+</ol>
+<p>表达式语法：</p>
+<p>​    execution([修饰符] 返回值类型 包名.类名.方法名(参数))</p>
+<p>​    访问修饰符可以省略</p>
+<p>​    返回值类型、包名、类名、方法名可以使用星号* 代表任意</p>
+<p>​    包名与类名之间一个点 . 代表当前包下的类，两个点 .. 表示当前包及其子包下的类</p>
+<p>​    参数列表可以使用两个点 .. 表示任意个数，任意类型的参数列表</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">execution([修饰符] 返回值类型 包名.类名.方法名(参数))</span><br><span class="line">execution(public void com.itheima.aop.Target.method())</span><br><span class="line">execution(void com.itheima.aop.Target.*(..))</span><br><span class="line">execution(* com.itheima.aop.*.*(..))</span><br><span class="line">execution(* com.itheima.aop..*.*(..))</span><br><span class="line">execution(* *..*.*(..))</span><br></pre></td></tr></table></figure>
+<ol>
+<li>通知的类型</li>
+</ol>
+<p>通知的配置语法：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>标签</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前置通知</td>
+<td></td>
+<td>用于配置前置通知。指定增强的方法在切入点方法之前执行</td>
+</tr>
+<tr>
+<td>后置通知</td>
+<td></td>
+<td>用于配置后置通知。指定增强的方法在切入点方法之后执行</td>
+</tr>
+<tr>
+<td>环绕通知</td>
+<td></td>
+<td>用于配置环绕通知。指定增强的方法在切入点方法之前和之后都执行</td>
+</tr>
+<tr>
+<td>异常抛出通知</td>
+<td></td>
+<td>用于配置异常抛出通知。指定增强的方法在出现异常时执行</td>
+</tr>
+<tr>
+<td>最终通知</td>
+<td></td>
+<td>用于配置最终通知。无论增强方式执行是否有异常都会执行</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>切点表达式的抽取</li>
+</ol>
+<p>当多个增强的切点表达式相同时，可以将切点表达式进行抽取，在增强中使用 pointcut-ref 属性代替 pointcut 属性来引用抽取后的切点表达式。</p>
+<p>2.3知识要点</p>
+<p>aop的织入</p>
+<p>​    通知的类型：前置通知、后置通知、环绕通知、异常抛出通知、最终通知</p>
+<p>​    切点表达式的写法：execution([修饰符] 返回值类型 包名.类名.方法名(参数))</p>
+<h3 id="3-基于注解的-AOP-开发"><a href="#3-基于注解的-AOP-开发" class="headerlink" title="3.基于注解的 AOP 开发"></a>3.基于注解的 AOP 开发</h3><p>3.1 快速入门</p>
+<p>基于注解的aop开发步骤：</p>
+<p>​    ① 创建目标接口和目标类（内部有切点）</p>
+<p>​    ② 创建切面类（内部有增强方法）</p>
+<p>​    ③ 将目标类和切面类的对象创建权交给 spring</p>
+<p>​    ④ 在切面类中使用注解配置织入关系</p>
+<p>​    ⑤ 在配置文件中开启组件扫描和 AOP 的自动代理</p>
+<p>​    ⑥ 测试</p>
+<p>3.2 注解配置 AOP 详解</p>
+<ol>
+<li>注解通知的类型</li>
+</ol>
+<p>通知的配置语法：@通知注解(“切点表达式”)</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>注解</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前置通知</td>
+<td>@Before</td>
+<td>用于配置前置通知。指定增强的方法在切入点方法之前执行</td>
+</tr>
+<tr>
+<td>后置通知</td>
+<td>@AfterReturning</td>
+<td>用于配置后置通知。指定增强的方法在切入点方法之后执行</td>
+</tr>
+<tr>
+<td>环绕通知</td>
+<td>@Around</td>
+<td>用于配置环绕通知。指定增强的方法在切入点方法之前和之后都执行</td>
+</tr>
+<tr>
+<td>异常抛出通知</td>
+<td>@AfterThrowing</td>
+<td>用于配置异常抛出通知。指定增强的方法在出现异常时执行</td>
+</tr>
+<tr>
+<td>最终通知</td>
+<td>@After</td>
+<td>用于配置最终通知。无论增强方式执行是否有异常都会执行</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>切点表达式的抽取</li>
+</ol>
+<p>​    同 xml 配置 aop 一样，我们可以将切点表达式抽取。抽取方式是在切面内定义方法，在该方法上使用@Pointcut注解定义切点表达式，然后在在增强注解中进行引用。具体如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@@Component(&quot;myAspect&quot;)</span><br><span class="line">@Aspect</span><br><span class="line">public class MyAspect &#123;</span><br><span class="line">	@Before(&quot;MyAspect.myPoint()&quot;)</span><br><span class="line">	public void before()&#123;</span><br><span class="line">		System.out.println(&quot;前置代码增强.....&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">@Pointcut(&quot;execution(* com.itheima.aop.*.*(..))&quot;)</span><br><span class="line">public void myPoint()&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注解aop开发步骤</p>
+<p>​    ① 使用@Aspect标注切面类</p>
+<p>​    ② 使用@通知注解标注通知方法</p>
+<p>​    ③ 在配置文件中配置aop自动代理</p>
+<h2 id="声明式事务控制"><a href="#声明式事务控制" class="headerlink" title="声明式事务控制"></a>声明式事务控制</h2><h3 id="1-编程式事务控制相关对象"><a href="#1-编程式事务控制相关对象" class="headerlink" title="1.编程式事务控制相关对象"></a>1.编程式事务控制相关对象</h3><p>1.1 PlatformTransactionManager </p>
+<p>​    PlatformTransactionManager 接口是 spring 的事务管理器，它里面提供了我们常用的操作事务的方法。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TransactionStatus getTransaction(TransactionDefination defination)</td>
+<td>获取事务的状态信息</td>
+</tr>
+<tr>
+<td>void commit(TransactionStatus status)</td>
+<td>提交事务</td>
+</tr>
+<tr>
+<td>void rollback(TransactionStatus status)</td>
+<td>回滚事务</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>注意：</p>
+<p>​    PlatformTransactionManager 是接口类型，不同的 Dao 层技术则有不同的实现类，例如：</p>
+<p>​    Dao 层技术是jdbc 或 mybatis 时：org.springframework.jdbc.datasource.DataSourceTransactionManager </p>
+<p>​    Dao 层技术是hibernate时：org.springframework.orm.hibernate5.HibernateTransactionManager</p>
+<p>1.2 TransactionDefinitionTransactionDefinition </p>
+<p>是事务的定义信息对象，里面有如下方法：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int getIsolationLevel()</td>
+<td>获得事务的隔离级别</td>
+</tr>
+<tr>
+<td>int getPropogationBehavior()</td>
+<td>获得事务的传播行为</td>
+</tr>
+<tr>
+<td>int getTimeout()</td>
+<td>获得超时时间</td>
+</tr>
+<tr>
+<td>boolean isReadOnly()</td>
+<td>是否只读</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol>
+<li>事务隔离级别</li>
+</ol>
+<p>设置隔离级别，可以解决事务并发产生的问题，如脏读、不可重复读和虚读。</p>
+<p>​    ISOLATION_DEFAULT</p>
+<p>​    ISOLATION_READ_UNCOMMITTED</p>
+<p>​    ISOLATION_READ_COMMITTED</p>
+<p>​    ISOLATION_REPEATABLE_READ</p>
+<p>​    ISOLATION_SERIALIZABLE</p>
+<ol>
+<li>事务传播行为</li>
+</ol>
+<p>​    REQUIRED：如果当前没有事务，就新建一个事务，如果已经存在一个事务中，加入到这个事务中。一般的选择（默认值）</p>
+<p>​    SUPPORTS：支持当前事务，如果当前没有事务，就以非事务方式执行（没有事务）</p>
+<p>​    MANDATORY：使用当前的事务，如果当前没有事务，就抛出异常</p>
+<p>​    REQUERS_NEW：新建事务，如果当前在事务中，把当前事务挂起。</p>
+<p>​    NOT_SUPPORTED：以非事务方式执行操作，如果当前存在事务，就把当前事务挂起</p>
+<p>​    NEVER：以非事务方式运行，如果当前存在事务，抛出异常</p>
+<p>​    NESTED：如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行 REQUIRED 类似的操作</p>
+<p>​    超时时间：默认值是-1，没有超时限制。如果有，以秒为单位进行设置</p>
+<p>​    是否只读：建议查询时设置为只读</p>
+<p>1.3 TransactionStatus</p>
+<p>TransactionStatus 接口提供的是事务具体的运行状态，方法介绍如下。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean hasSavepoint()</td>
+<td>是否存储回滚点</td>
+</tr>
+<tr>
+<td>boolean isCompleted()</td>
+<td>事务是否完成</td>
+</tr>
+<tr>
+<td>boolean isNewTransaction()</td>
+<td>是否是新事务</td>
+</tr>
+<tr>
+<td>boolean isRollbackOnly()</td>
+<td>事务是否回滚</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="2-基于-XML-的声明式事务控制"><a href="#2-基于-XML-的声明式事务控制" class="headerlink" title="2.基于 XML 的声明式事务控制"></a>2.基于 XML 的声明式事务控制</h3><p>2.1 什么是声明式事务控制</p>
+<p>​    Spring 的声明式事务顾名思义就是采用声明的方式来处理事务。这里所说的声明，就是指在配置文件中声明，用在 Spring 配置文件中声明式的处理事务来代替代码式的处理事务。</p>
+<p>声明式事务处理的作用</p>
+<p>​    事务管理不侵入开发的组件。具体来说，业务逻辑对象就不会意识到正在事务管理之中，事实上也应该如此，因为事务管理是属于系统层面的服务，而不是业务逻辑的一部分，如果想要改变事务管理策划的话，也只需要在定义文件中重新配置即可</p>
+<p>​    在不需要事务管理的时候，只要在设定文件上修改一下，即可移去事务管理服务，无需改变代码重新编译，这样维护起来极其方便</p>
+<p>​    注意：Spring 声明式事务控制底层就是AOP。</p>
+<p>2.2 声明式事务控制的实现</p>
+<p>声明式事务控制明确事项：</p>
+<p>​    谁是切点？</p>
+<p>​    谁是通知？</p>
+<p>​    配置切面？</p>
+<p>2.3 切点方法的事务参数的配置</p>
+<p>其中， 代表切点方法的事务参数的配置，例如：</p>
+<p>​    name：切点方法名称</p>
+<p>​    isolation:事务的隔离级别</p>
+<p>​    propogation：事务的传播行为</p>
+<p>​    timeout：超时时间</p>
+<p>​    read-only：是否只读</p>
+<p>2.4 知识要点</p>
+<p>​    声明式事务控制的配置要点</p>
+<p>​    平台事务管理器配置</p>
+<p>​    事务通知的配置</p>
+<p>​    事务aop织入的配置</p>
+<h3 id="3-基于注解的声明式事务控制"><a href="#3-基于注解的声明式事务控制" class="headerlink" title="3.基于注解的声明式事务控制"></a>3.基于注解的声明式事务控制</h3><p>3.2 注解配置声明式事务控制解析</p>
+<p>​    ① 使用 @Transactional 在需要进行事务控制的类或是方法上修饰，注解可用的属性同 xml 配置方式，例如隔离级别、传播行为等。</p>
+<p>​    ② 注解使用在类上，那么该类下的所有方法都使用同一套注解参数配置。</p>
+<p>​    ③ 使用在方法上，不同的方法可以采用不同的事务参数配置。</p>
+<p>​    ④ Xml配置文件中要开启事务的注解驱动</p>
+<p>3.3 知识要点</p>
+<p>​    注解声明式事务控制的配置要点</p>
+<p>​    平台事务管理器配置（xml方式）</p>
+<p>​    事务通知的配置（@Transactional注解配置）</p>
+<p>​    事务注解驱动的配置 </p>
+<h2 id="5-MyBatis入门操作"><a href="#5-MyBatis入门操作" class="headerlink" title="5.MyBatis入门操作"></a>5.MyBatis入门操作</h2><h3 id="1-Mybatis简介"><a href="#1-Mybatis简介" class="headerlink" title="1.Mybatis简介"></a>1.Mybatis简介</h3><p>1.2 原始jdbc操作的分析</p>
+<p>原始jdbc开发存在的问题如下：</p>
+<p>​    ① 数据库连接创建、释放频繁造成系统资源浪费从而影响系统性能</p>
+<p>​    ② sql 语句在代码中硬编码，造成代码不易维护，实际应用 sql 变化的可能较大，sql 变动需要改变java代码。</p>
+<p>​    ③ 查询操作时，需要手动将结果集中的数据手动封装到实体中。插入操作时，需要手动将实体的数据设置到sql语句的占位符位置</p>
+<p>应对上述问题给出的解决方案：</p>
+<p>​    ① 使用数据库连接池初始化连接资源</p>
+<p>​    ② 将sql语句抽取到xml配置文件中</p>
+<p>​    ③ 使用反射、内省等底层技术，自动将实体与表进行属性与字段的自动映射</p>
+<p>1.3 什么是Mybatis</p>
+<p>​    mybatis 是一个优秀的基于java的持久层框架，它内部封装了jdbc，使开发者只需要关注sql语句本身，而不需要花费精力去处理加载驱动、创建连接、创建statement等繁杂的过程。</p>
+<p>​    mybatis通过xml或注解的方式将要执行的各种 statement配置起来，并通过java对象和statement中sql的动态参数进行映射生成最终执行的sql语句。</p>
+<p>​    最后mybatis框架执行sql并将结果映射为java对象并返回。采用ORM思想解决了实体和数据库映射的问题，对jdbc 进行了封装，屏蔽了jdbc api 底层访问细节，使我们不用与jdbc api打交道，就可以完成对数据库的持久化操作。</p>
+<h3 id="2-MyBatis开发步骤"><a href="#2-MyBatis开发步骤" class="headerlink" title="2.MyBatis开发步骤"></a>2.MyBatis开发步骤</h3><p>MyBatis开发步骤：</p>
+<p>​    ① 添加MyBatis的坐标</p>
+<p>​    ② 创建user数据表</p>
+<p>​    ③ 编写User实体类</p>
+<p>​    ④ 编写映射文件UserMapper.xml</p>
+<p>​    ⑤ 编写核心文件SqlMapConfig.xml</p>
+<p>​    ⑥ 编写测试类</p>
+<p>2.2 环境搭建</p>
+<ol>
+<li><p>导入MyBatis的坐标和其他相关坐标</p>
+</li>
+<li><p>MyBatis的增删改查操作</p>
+</li>
+</ol>
+<p>知识小结</p>
+<p>增删改查映射配置与API：</p>
+<p>查询数据：List userList = sqlSession.selectList(“userMapper.findAll”);</p>
+<p>​        select * from User</p>
+<p>添加数据：sqlSession.insert(“userMapper.add”, user);</p>
+<p>​        insert into user values(#{id},#{username},#{password})</p>
+<p>修改数据：sqlSession.update(“userMapper.update”, user);</p>
+<p>​        update user set username=#{username},password=#{password} where id=#{id}</p>
+<p>删除数据：sqlSession.delete(“userMapper.delete”,3);</p>
+<p>​        delete from user where id=#{id}</p>
+<h3 id="5-MyBatis核心配置文件概述"><a href="#5-MyBatis核心配置文件概述" class="headerlink" title="5.MyBatis核心配置文件概述"></a>5.MyBatis核心配置文件概述</h3><p>5.1 MyBatis核心配置文件层级关系</p>
+<p><img src="https://s2.loli.net/2023/10/17/JOETG5mYS7KMZNh.png" alt="image-20231017162302226"></p>
+<p>5.2 MyBatis常用配置解析</p>
+<ol>
+<li>environments标签</li>
+</ol>
+<p>数据库环境的配置，支持多环境配置</p>
+<p>​    其中，事务管理器（transactionManager）类型有两种：</p>
+<p>​        • JDBC：这个配置就是直接使用了JDBC 的提交和回滚设置，它依赖于从数据源得到的连接来管理事务作用域。</p>
+<p>​        • MANAGED：这个配置几乎没做什么。它从来不提交或回滚一个连接，而是让容器来管理事务的整个生命周期（比如JEE 应用服务器的上下文）。 默认情况下它会关闭连接，然而一些容器并不希望这样，因此需要将 closeConnection 属性设置为 false 来阻止它默认的关闭行为。</p>
+<p>其中，数据源（dataSource）类型有三种：</p>
+<p>​    • UNPOOLED：这个数据源的实现只是每次被请求时打开和关闭连接。</p>
+<p>​    • POOLED：这种数据源的实现利用“池”的概念将 JDBC 连接对象组织起来。</p>
+<p>​    • JNDI：这个数据源的实现是为了能在如 EJB 或应用服务器这类容器中使用，容器可以集中或在外部配置数据源，然后放置一个 JNDI 上下文的引用。</p>
+<ol>
+<li>mapper标签</li>
+</ol>
+<p>该标签的作用是加载映射的，加载方式有如下几种：</p>
+<p>​    • 使用相对于类路径的资源引用，例如：<code>&lt;mapper resource=&quot;org/mybatis/builder/AuthorMapper.xml&quot;/&gt;</code></p>
+<p>​    • 使用完全限定资源定位符（URL），例如：<code>&lt;mapper url=&quot;file:///var/mappers/AuthorMapper.xml&quot;/&gt;</code></p>
+<p>​    • 使用映射器接口实现类的完全限定类名，例如：<code>&lt;mapper class=&quot;org.mybatis.builder.AuthorMapper&quot;/&gt;</code></p>
+<p>​    • 将包内的映射器接口实现全部注册为映射器，例如：<code>&lt;package name=&quot;org.mybatis.builder&quot;/&gt;</code></p>
+<ol>
+<li>Properties标签</li>
+</ol>
+<p>​    实际开发中，习惯将数据源的配置信息单独抽取成一个properties文件，该标签可以加载额外配置的properties文件</p>
+<ol>
+<li>typeAliases标签</li>
+</ol>
+<p>类型别名是为Java 类型设置一个短的名字。</p>
+<p>配置typeAliases，为com.itheima.domain.User定义别名为user</p>
+<p>上面我们是自定义的别名，mybatis框架已经为我们设置好的一些常用的类型的别名</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>别名</th>
+<th>数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>String</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="6-MyBatis相应API"><a href="#6-MyBatis相应API" class="headerlink" title="6.MyBatis相应API"></a>6.MyBatis相应API</h3><p>6.1 SqlSession工厂构建器SqlSessionFactoryBuilder</p>
+<p>​    常用API：SqlSessionFactory build(InputStream inputStream)</p>
+<p>通过加载mybatis的核心文件的输入流的形式构建一个SqlSessionFactory对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">resource</span> <span class="operator">=</span> <span class="string">&quot;org/mybatis/builder/mybatis-config.xml&quot;</span>;</span><br><span class="line"><span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> Resources.getResourceAsStream(resource);</span><br><span class="line"><span class="type">SqlSessionFactoryBuilder</span> <span class="variable">builder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SqlSessionFactoryBuilder</span>();</span><br><span class="line"><span class="type">SqlSessionFactory</span> <span class="variable">factory</span> <span class="operator">=</span> builder.build(inputStream);</span><br></pre></td></tr></table></figure>
+<p>其中， Resources 工具类，这个类在 org.apache.ibatis.io 包中。Resources 类帮助你从类路径下、文件系统或一个 web URL 中加载资源文件。</p>
+<p>6.2 SqlSession工厂对象SqlSessionFactory</p>
+<p>SqlSessionFactory 有多个个方法创建 SqlSession 实例。常用的有如下两个：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>openSession()</td>
+<td>会默认开启一个事务，但事务不会自动提交，也就意味着需要手动提交该事务，更新操作数据才会持久化到数据库中</td>
+</tr>
+<tr>
+<td>openSession(boolean autoCommit)</td>
+<td>参数为是否自动提交，如果设置为true，那么不需要手动提交事务</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>6.3 SqlSession会话对象</p>
+<p>SqlSession 实例在 MyBatis 中是非常强大的一个类。在这里你会看到所有执行语句、提交或回滚事务和获取映射器实例的方法。</p>
+<p>执行语句的方法主要有：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">T selectOne(String statement, Object parameter) </span><br><span class="line">List selectList(String statement, Object parameter) </span><br><span class="line">int insert(String statement, Object parameter) </span><br><span class="line">int update(String statement, Object parameter) </span><br><span class="line">int delete(String statement, Object parameter)</span><br></pre></td></tr></table></figure>
+<p>操作事务的方法主要有：</p>
+<p>​    void commit()</p>
+<p>​    void rollback()</p>
+<p>1.Mybatis的Dao层实现</p>
+<p>代理开发方式</p>
+<ol>
+<li>代理开发方式介绍</li>
+</ol>
+<p>​    采用 Mybatis 的代理开发方式实现 DAO 层的开发，这种方式是我们后面进入企业的主流。</p>
+<p>​    Mapper 接口开发方法只需要程序员编写Mapper 接口（相当于Dao 接口），由Mybatis 框架根据接口定义创建接口的动态代理对象，代理对象的方法体同上边Dao接口实现类方法。</p>
+<p>Mapper 接口开发需要遵循以下规范：</p>
+<p>​    1、 Mapper.xml文件中的namespace与mapper接口的全限定名相同</p>
+<p>​    2、 Mapper接口方法名和Mapper.xml中定义的每个statement的id相同</p>
+<p>​    3、 Mapper接口方法的输入参数类型和mapper.xml中定义的每个sql的parameterType的类型相同</p>
+<p>​    4、 Mapper接口方法的输出参数类型和mapper.xml中定义的每个sql的resultType的类型相同</p>
+<p>MyBatis的Dao层实现的两种方式：</p>
+<p>手动对Dao进行实现：传统开发方式</p>
+<p>代理方式对Dao进行实现：</p>
+<p>UserMapper userMapper = sqlSession.getMapper(UserMapper.class)</p>
+<p><img src="https://s2.loli.net/2023/10/17/mWkVbga4nILj3MJ.png" alt="image-20231017162629569"></p>
+<p>1.MyBatis映射文件深入</p>
+<p>1.1 动态sql语句</p>
+<ol>
+<li>动态sql语句概述</li>
+</ol>
+<p>​    Mybatis 的映射文件中，前面我们的 SQL 都是比较简单的，有些时候业务逻辑复杂时，我们的 SQL是动态变化的，此时在前面的学习中我们的 SQL 就不能满足要求了。‘</p>
+<ol>
+<li>动态 SQL 之 <code>&lt;if&gt;</code></li>
+</ol>
+<p>​    我们根据实体类的不同取值，使用不同的 SQL语句来进行查询。比如在 id如果不为空时可以根据id查询，如果username 不同空时还要加入用户名作为条件。这种情况在我们的多条件组合查询中经常会碰到。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=&quot;findByCondition&quot; parameterType=&quot;user&quot; resultType=&quot;user&quot;&gt;</span><br><span class="line">	select * from User</span><br><span class="line">	&lt;where&gt;</span><br><span class="line">		&lt;if test=&quot;id!=0&quot;&gt;</span><br><span class="line">			and id=#&#123;id&#125;</span><br><span class="line">		&lt;/if&gt;</span><br><span class="line">		&lt;if test=&quot;username!=null&quot;&gt;</span><br><span class="line">			and username=#&#123;username&#125;</span><br><span class="line">		&lt;/if&gt;</span><br><span class="line">	&lt;/where&gt;</span><br><span class="line">&lt;/select&gt;	</span><br></pre></td></tr></table></figure>
+<ol>
+<li>动态 SQL 之 <code>&lt;foreach&gt;</code></li>
+</ol>
+<p>​    循环执行sql的拼接操作，例如：SELECT * FROM USER WHERE id IN (1,2,5)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=&quot;findByIds&quot; parameterType=&quot;list&quot; resultType=&quot;user&quot;&gt;</span><br><span class="line">	select * from User</span><br><span class="line">	&lt;where&gt;</span><br><span class="line">		&lt;foreach collection=&quot;array&quot; open=&quot;id in(&quot; close=&quot;)&quot; item=&quot;id&quot; separator=&quot;,&quot;&gt;</span><br><span class="line">			#&#123;id&#125;</span><br><span class="line">		&lt;/foreach&gt;</span><br><span class="line">	&lt;/where&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+<p>foreach标签的属性含义如下：</p>
+<p>标签用于遍历集合，它的属性：</p>
+<p>​    • collection：代表要遍历的集合元素，注意编写时不要写#{}</p>
+<p>​    • open：代表语句的开始部分</p>
+<p>​    • close：代表结束部分</p>
+<p>​    • item：代表遍历集合的每个元素，生成的变量名</p>
+<p>​    • sperator：代表分隔符</p>
+<p>1.2 SQL片段抽取</p>
+<p>Sql 中可将重复的 sql 提取出来，使用时用 include 引用即可，最终达到 sql 重用的目的</p>
+<p>MyBatis映射文件配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;select&gt;：查询</span><br><span class="line">&lt;insert&gt;：插入</span><br><span class="line">&lt;update&gt;：修改</span><br><span class="line">&lt;delete&gt;：删除</span><br><span class="line">&lt;where&gt;：where条件</span><br><span class="line">&lt;if&gt;：if判断</span><br><span class="line">&lt;foreach&gt;：循环</span><br><span class="line">&lt;sql&gt;：sql片段抽取</span><br></pre></td></tr></table></figure>
+<ol>
+<li>MyBatis核心配置文件深入</li>
+</ol>
+<p>1.1 typeHandlers标签</p>
+<p>​    无论是 MyBatis 在预处理语句（PreparedStatement）中设置一个参数时，还是从结果集中取出一个值时， 都会用类型处理器将获取的值以合适的方式转换成 Java 类型。</p>
+<p>​    你可以重写类型处理器或创建你自己的类型处理器来处理不支持的或非标准的类型。具体做法为：实现org.apache.ibatis.type.TypeHandler 接口， 或继承一个很便利的类 org.apache.ibatis.type.BaseTypeHandler， 然后可以选择性地将它映射到一个JDBC类型。例如需求：一个Java中的Date数据类型，我想将之存到数据库的时候存成一个1970年至今的毫秒数，取出来时转换成java的Date，即java的Date与数据库的varchar毫秒值之间转换。</p>
+<p>开发步骤：</p>
+<p>​    ① 定义转换类继承类BaseTypeHandler</p>
+<p>​    ② 覆盖4个未实现的方法，其中setNonNullParameter为java程序设置数据到数据库的回调方法，getNullableResult为查询时 mysql的字符串类型转换成 java的Type类型的方法</p>
+<p>​    ③ 在MyBatis核心配置文件中进行注册</p>
+<p>​    ④ 测试转换是否正确</p>
+<p>1.2 plugins标签</p>
+<p>​    MyBatis可以使用第三方的插件来对功能进行扩展，分页助手PageHelper是将分页的复杂操作进行封装，使用简单的方式即可获得分页的相关数据</p>
+<p>开发步骤：</p>
+<p>​    ① 导入通用PageHelper的坐标</p>
+<p>​    ② 在mybatis核心配置文件中配置PageHelper插件</p>
+<p>​    ③ 测试分页数据获取</p>
+<p>MyBatis核心配置文件常用标签：</p>
+<p>​    1、properties标签：该标签可以加载外部的properties文件</p>
+<p>​    2、typeAliases标签：设置类型别名</p>
+<p>​    3、environments标签：数据源环境配置标签</p>
+<p>​    4、typeHandlers标签：配置自定义类型处理器</p>
+<p>​    5、plugins标签：配置MyBatis的插件    </p>
+<p>MyBatis多表配置方式：</p>
+<p>​    一对一配置：使用做配置</p>
+<p>​    一对多配置：使用+做配置</p>
+<p>​    多对多配置：使用+做配置</p>
+<p>1.Mybatis的注解开发</p>
+<p>​    1.1 MyBatis的常用注解</p>
+<p>​    这几年来注解开发越来越流行，Mybatis也可以使用注解开发方式，这样我们就可以减少编写Mapper映射文件了。我们先围绕一些基本的CRUD来学习，再学习复杂映射多表操作。</p>
+<p>​    @Insert：实现新增</p>
+<p>​    @Update：实现更新</p>
+<p>​    @Delete：实现删除</p>
+<p>​    @Select：实现查询</p>
+<p>​    @Result：实现结果集封装</p>
+<p>​    @Results：可以与@Result 一起使用，封装多个结果集</p>
+<p>​    @One：实现一对一结果集封装</p>
+<p>​    @Many：实现一对多结果集封装</p>
+<p>1.3 MyBatis的注解实现复杂映射开发</p>
+<p>​    实现复杂关系映射之前我们可以在映射文件中通过配置来实现，使用注解开发后，我们可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@Results</td>
+<td>代替的是标签该注解中可以使用单个@Result注解，也可以使用@Result集合。使用格式：@Results（{@Result（），@Result（）}）或@Results（@Result（））</td>
+</tr>
+<tr>
+<td>@Resut</td>
+<td>代替了标签和标签@Result中属性介绍：column：数据库的列名property：需要装配的属性名one：需要使用的@One 注解（@Result（one=@One）（）））many：需要使用的@Many 注解（@Result（many=@many）（））</td>
+</tr>
+<tr>
+<td>@One （一对一）</td>
+<td>代替了 标签，是多表查询的关键，在注解中用来指定子查询返回单一对象。@One注解属性介绍：select: 指定用来多表查询的 sqlmapper使用格式：@Result(column=” “,property=””,one=@One(select=””))</td>
+</tr>
+<tr>
+<td>@Many （多对一）</td>
+<td>代替了标签, 是是多表查询的关键，在注解中用来指定子查询返回对象集合。使用格式：@Result(property=””,column=””,many=@Many(select=””))</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://putongl.github.io">普通L</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://putongl.github.io/SSM.html">http://putongl.github.io/SSM.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://putongl.github.io" target="_blank">普通l</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/SSM/">SSM</a></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/SpringBoot.html" title="SpringBoot"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SpringBoot</div></div></a></div><div class="next-post pull-right"><a href="/javaSE.html" title="javaSE"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">javaSE</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">普通L</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">邮箱:shuai132325@gmail.com</p> <p align="center">QQ号:1826627978</p></div></div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js"></script><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js"></script><script id="rendered-js" src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E5%A4%A7%E6%A1%86%E6%9E%B6"><span class="toc-number">1.</span> <span class="toc-text">三大框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Spring%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1.Spring简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Spring%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. Spring是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Spring%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.Spring快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Spring%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.Spring配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Spring%E7%9B%B8%E5%85%B3API"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.Spring相关API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Spring%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">1.2.</span> <span class="toc-text">2.Spring配置数据源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E6%BA%90%EF%BC%88%E8%BF%9E%E6%8E%A5%E6%B1%A0%EF%BC%89%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.数据源（连接池）的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Spring%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.Spring注解开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Spring%E9%9B%86%E6%88%90Junit"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.Spring集成Junit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SpringMVC%E5%85%A5%E9%97%A8"><span class="toc-number">1.3.</span> <span class="toc-text">3.SpringMVC入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Spring%E9%9B%86%E6%88%90web%E7%8E%AF%E5%A2%83"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.Spring集成web环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-SpringMVC-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.SpringMVC 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-SpringMVC%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.SpringMVC组件解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-SpringMVC%E6%B3%A8%E8%A7%A3%E8%A7%A3%E6%9E%90"><span class="toc-number">1.3.4.</span> <span class="toc-text">4.SpringMVC注解解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-pringMVC%E7%9A%84%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94"><span class="toc-number">1.3.5.</span> <span class="toc-text">5.pringMVC的请求和响应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-SpringMVC%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">1.3.6.</span> <span class="toc-text">6.SpringMVC拦截器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-SpringMVC%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-number">1.3.7.</span> <span class="toc-text">7.SpringMVC异常处理机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8BAOP"><span class="toc-number">1.4.</span> <span class="toc-text">4.面向切面编程AOP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Spring-%E7%9A%84-AOP-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. Spring 的 AOP 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E4%BA%8E-XML-%E7%9A%84-AOP-%E5%BC%80%E5%8F%91"><span class="toc-number">1.4.2.</span> <span class="toc-text">2.基于 XML 的 AOP 开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84-AOP-%E5%BC%80%E5%8F%91"><span class="toc-number">1.4.3.</span> <span class="toc-text">3.基于注解的 AOP 开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6"><span class="toc-number">1.5.</span> <span class="toc-text">声明式事务控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BC%96%E7%A8%8B%E5%BC%8F%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6%E7%9B%B8%E5%85%B3%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.编程式事务控制相关对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E4%BA%8E-XML-%E7%9A%84%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.基于 XML 的声明式事务控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6"><span class="toc-number">1.5.3.</span> <span class="toc-text">3.基于注解的声明式事务控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-MyBatis%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">1.6.</span> <span class="toc-text">5.MyBatis入门操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Mybatis%E7%AE%80%E4%BB%8B"><span class="toc-number">1.6.1.</span> <span class="toc-text">1.Mybatis简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MyBatis%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.6.2.</span> <span class="toc-text">2.MyBatis开发步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-MyBatis%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%A6%82%E8%BF%B0"><span class="toc-number">1.6.3.</span> <span class="toc-text">5.MyBatis核心配置文件概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-MyBatis%E7%9B%B8%E5%BA%94API"><span class="toc-number">1.6.4.</span> <span class="toc-text">6.MyBatis相应API</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/SpringBoot.html" title="SpringBoot">SpringBoot</a><time datetime="2023-10-18T11:41:56.613Z" title="发表于 2023-10-18 19:41:56">2023-10-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/SSM.html" title="SSM">SSM</a><time datetime="2023-10-18T08:20:25.329Z" title="发表于 2023-10-18 16:20:25">2023-10-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/javaSE.html" title="javaSE">javaSE</a><time datetime="2023-10-18T08:20:25.324Z" title="发表于 2023-10-18 16:20:25">2023-10-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/JavaWeb.html" title="JavaWeb">JavaWeb</a><time datetime="2023-10-18T08:20:25.322Z" title="发表于 2023-10-18 16:20:25">2023-10-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/javaWeb.html" title="javaWeb">javaWeb</a><time datetime="2023-10-17T06:30:40.151Z" title="发表于 2023-10-17 14:30:40">2023-10-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 普通L</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="ture" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
