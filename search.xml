@@ -10068,4 +10068,58 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
         <tag>JavaWeb</tag>
       </tags>
   </entry>
+  <entry>
+    <title>将项目上传到gitee上面</title>
+    <url>//git.html</url>
+    <content><![CDATA[<h2 id="将项目上传到gitee上"><a href="#将项目上传到gitee上" class="headerlink" title="将项目上传到gitee上"></a>将项目上传到gitee上</h2><p>1.新建仓库</p>
+<p><img src="https://s2.loli.net/2023/11/09/45LPbOEIiAagoS3.webp" alt="image.png"></p>
+<p><img src="https://s2.loli.net/2023/11/09/i51aHGPbW9tEVe2.webp" alt="image.png"></p>
+<p>出现这样的界面就创建仓库成功了</p>
+<p><img src="https://s2.loli.net/2023/11/09/1fZWhxG3A2TsYrU.webp" alt="image.png"></p>
+<p>然后git全局设置（配置你的用户名及邮箱）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;木倾心&quot;</span><br><span class="line">$ git config --global user.email &quot;自己的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>在本地项目打开终端</p>
+<p><img src="https://s2.loli.net/2023/11/09/sXazqONBI8t4Hdy.webp" alt="image.png"></p>
+<p><img src="https://s2.loli.net/2023/11/09/luMAN3YRmUnyzIr.webp" alt="image.png"></p>
+<p>然后初始化本地环境，把该项目变成可被git管理的仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<p>如图：</p>
+<p><img src="https://s2.loli.net/2023/11/09/5WBITKGatfZgFoC.webp" alt="image.png"></p>
+<p>添加该项目下的所有文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git add . （不要忘记后面那个点）</span><br></pre></td></tr></table></figure>
+<p>添加该项目所有文件到本地仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git commit -m &#x27;本次提交的说明&#x27; (提交说明尽量写得有意义)</span><br></pre></td></tr></table></figure>
+<p>将本地代码库与远程代码库相关联</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git remote add origin https://gitee.com/mu-qingxin/自己gitee创建仓库地址</span><br></pre></td></tr></table></figure>
+<p>将本地代码推送到指定远程的仓库中</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git push -u origin &quot;master&quot; </span><br></pre></td></tr></table></figure>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><h3 id="1-不用初始化ReadMe文件，造成本地和远程的不同步"><a href="#1-不用初始化ReadMe文件，造成本地和远程的不同步" class="headerlink" title="1.不用初始化ReadMe文件，造成本地和远程的不同步"></a>1.不用初始化ReadMe文件，造成本地和远程的不同步</h3><h3 id="2-报错：-git-push后出现错误-rejected-master-gt-master-non-fast-forward"><a href="#2-报错：-git-push后出现错误-rejected-master-gt-master-non-fast-forward" class="headerlink" title="2.报错：[git push后出现错误 ![rejected] master -&gt; master(non-fast-forward) ]"></a>2.报错：[git push后出现错误 ![rejected] master -&gt; master(non-fast-forward) ]</h3><p>我们提交代码<code>git push</code>后出现如下错误提示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git push -u origin master</span><br><span class="line">To https://gitee.com/xxxxx/vue_shop.git</span><br><span class="line"> ! [rejected]        master -&gt; master (non-fast-forward)</span><br><span class="line">error: failed to push some refs to &#x27;https://gitee.com/xxxxx/vue_shop.git&#x27;</span><br><span class="line">hint: Updates were rejected because the tip of your current branch is behind</span><br><span class="line">hint: its remote counterpart. Integrate the remote changes (e.g.</span><br><span class="line">hint: &#x27;git pull ...&#x27;) before pushing again.</span><br><span class="line">hint: See the &#x27;Note about fast-forwards&#x27; in &#x27;git push --help&#x27; for details.</span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.loli.net/2023/11/09/TijUrupa92fbXYZ.png" alt="img"></p>
+<ul>
+<li>原因</li>
+</ul>
+<p>Git仓库中已经有一部分代码，所以它不允许你直接把你的代码覆盖上去。<br>远程仓库和本地仓库存在差异。<br>一般都是因为你在码云创建的仓库有ReadMe文件，而本地没有，造成本地和远程的不同步</p>
+<ul>
+<li>解决方法：</li>
+</ul>
+<p>方法一、同步</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1、git pull origin master --allow-unrelated-histories //把远程仓库和本地同步，消除差异</span><br><span class="line">2、重新add和commit相应文件</span><br><span class="line">3、git push origin master</span><br><span class="line">4、此时就能够上传成功了</span><br></pre></td></tr></table></figure>
+<p>如果只是因为本地没有ReadMe文件，那么就在本地生成一个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git pull --rebase origin master  //本地生成ReadMe文件</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>方法二：强推</p>
+<p>即利用强覆盖方式用你本地的代码替代git仓库内的内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
+<p>该命令会强制上传覆盖远程文件，慎用</p>
+<p>方法三、</p>
+<p>先把git的东西fetch到你本地然后merge后再push</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch</span><br><span class="line">git merge</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
 </search>
