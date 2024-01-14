@@ -10122,4 +10122,19 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
         <tag>Git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>anaconda的默认位置修改pkgs以及默认创建环境踩坑</title>
+    <url>//python.html</url>
+    <content><![CDATA[<h1 id="anaconda的默认位置修改pkgs以及默认创建环境踩坑"><a href="#anaconda的默认位置修改pkgs以及默认创建环境踩坑" class="headerlink" title="anaconda的默认位置修改pkgs以及默认创建环境踩坑"></a>anaconda的默认位置修改pkgs以及默认创建环境踩坑</h1><p>即可anaconda 的默认pkgs缓存位置以及创建环境位置 使用conda info 打印出来默认位置确实使你安装在d盘的位置但是由于d盘你没有给用户设置完全控制所以无法使用 即系统自动顺应到c盘去 所以只需要去你要修改的文件及右键属性点击安全选项给用户设置完全控制即可如图</p>
+<p><img src="https://s2.loli.net/2023/11/22/UsHFv6NgJbzonGc.png" alt="image-20231122175804082"></p>
+<p><img src="https://s2.loli.net/2023/11/22/FdO1I5GBismlxqz.png" alt="image-20231122175904116"></p>
+<p><img src="https://s2.loli.net/2023/11/22/FCgtScvIyG5R4uN.png" alt="img"></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>
