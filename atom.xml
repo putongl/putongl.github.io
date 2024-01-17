@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>普通l</title>
+  <title>刘晗宇のBlog</title>
   
   
   <link href="http://putongl.github.io/atom.xml" rel="self"/>
   
   <link href="http://putongl.github.io/"/>
-  <updated>2023-12-12T00:50:50.106Z</updated>
+  <updated>2024-01-16T15:05:57.131Z</updated>
   <id>http://putongl.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://putongl.github.io/python.html"/>
     <id>http://putongl.github.io/python.html</id>
     <published>2023-12-12T00:50:56.508Z</published>
-    <updated>2023-12-12T00:50:50.106Z</updated>
+    <updated>2024-01-16T15:05:57.131Z</updated>
     
     <content type="html"><![CDATA[<h1 id="anaconda的默认位置修改pkgs以及默认创建环境踩坑"><a href="#anaconda的默认位置修改pkgs以及默认创建环境踩坑" class="headerlink" title="anaconda的默认位置修改pkgs以及默认创建环境踩坑"></a>anaconda的默认位置修改pkgs以及默认创建环境踩坑</h1><p>即可anaconda 的默认pkgs缓存位置以及创建环境位置 使用conda info 打印出来默认位置确实使你安装在d盘的位置但是由于d盘你没有给用户设置完全控制所以无法使用 即系统自动顺应到c盘去 所以只需要去你要修改的文件及右键属性点击安全选项给用户设置完全控制即可如图</p><p><img src="https://s2.loli.net/2023/11/22/UsHFv6NgJbzonGc.png" alt="image-20231122175804082"></p><p><img src="https://s2.loli.net/2023/11/22/FdO1I5GBismlxqz.png" alt="image-20231122175904116"></p><p><img src="https://s2.loli.net/2023/11/22/FCgtScvIyG5R4uN.png" alt="img"></p>]]></content>
     
