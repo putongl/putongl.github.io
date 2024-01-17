@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>刘晗宇のBlog</title>
+  <title>普通LのBlog</title>
   
   
   <link href="http://putongl.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>http://putongl.github.io/</id>
   
   <author>
-    <name>普通L</name>
+    <name>刘晗宇</name>
     
   </author>
   
