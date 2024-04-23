@@ -11427,4 +11427,22 @@ function 函数名(形参1, 形参2 , 形参3...) &#123; // 可以定义任意�
         <tag>JavaWeb</tag>
       </tags>
   </entry>
+  <entry>
+    <title>若依实现操作日志</title>
+    <url>//%E8%8B%A5%E4%BE%9D%E5%AE%9E%E7%8E%B0%E6%93%8D%E4%BD%9C%E6%97%A5%E5%BF%97.html</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 处理完请求后执行</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> joinPoint 切点</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@AfterReturning(pointcut = &quot;@annotation(controllerLog)&quot;, returning = &quot;jsonResult&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doAfterReturning</span><span class="params">(JoinPoint joinPoint, Log controllerLog, Object jsonResult)</span> &#123;</span><br><span class="line">    handleLog(joinPoint, controllerLog, <span class="literal">null</span>, jsonResult);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>@annotation</code> 是 Spring AOP 中用于匹配带有特定注解的方法的切入点表达式。它允许你指定一个注解类型作为切入点的一部分，并且只有带有指定注解的方法才会被拦截。</p>
+<p>在切入点表达式中，<code>@annotation(annotationType)</code> 使用了 <code>@annotation</code> 通配符，后面跟着括号和注解类型。例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Pointcut(&quot;@annotation(com.example.Log)&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">logPointcut</span><span class="params">()</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>这个切入点表达式匹配了所有被 <code>@Log</code> 注解标记的方法，因为它使用了 <code>@annotation</code> 通配符，后面指定了 <code>com.example.Log</code> 这个注解类型。这样，在切面中的通知方法就可以拦截到带有 <code>@Log</code> 注解的方法了。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>java后端</category>
+      </categories>
+      <tags>
+        <tag>日志</tag>
+      </tags>
+  </entry>
 </search>
